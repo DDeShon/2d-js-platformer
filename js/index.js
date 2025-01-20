@@ -16,3 +16,5 @@ const layersData = {
   l_New_Layer_9: l_New_Layer_9,
   l_New_Layer_9_1: l_New_Layer_9_1,
 };
+
+const tilesets = {};
