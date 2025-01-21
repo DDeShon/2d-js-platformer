@@ -20,4 +20,6 @@ const layersData = {
 const tilesets = {
   l_New_Layer_1: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_2: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  l_New_Layer_8: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  l_New_Layer_3: { imageUrl: "./images/tileset.png", tileSize: 16 },
 };
