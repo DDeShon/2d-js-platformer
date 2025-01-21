@@ -17,4 +17,7 @@ const layersData = {
   l_New_Layer_9_1: l_New_Layer_9_1,
 };
 
-const tilesets = {};
+const tilesets = {
+  l_New_Layer_1: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  l_New_Layer_2: { imageUrl: "./images/decorations.png", tileSize: 16 },
+};
