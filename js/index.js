@@ -25,4 +25,5 @@ const tilesets = {
   l_Decorations: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_5: { imageUrl: "./images/tileset.png", tileSize: 16 },
   l_New_Layer_6: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  l_New_Layer_9: { imageUrl: "./images/decorations.png", tileSize: 16 },
 };
