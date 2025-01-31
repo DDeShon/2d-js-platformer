@@ -37,7 +37,11 @@ const blockSize = 16; // Setting each tile as 16x16 pixels
 collisionBlocks.forEach((row, y) => {
   row.forEach((symbol, x) => {
     if (symbol === 1) {
-      collisionBlocks.push(new CollisionBlock({}));
+      collisionBlocks.push(
+        new CollisionBlock({
+          x: x * blockSize,
+        })
+      );
     }
   });
 });
