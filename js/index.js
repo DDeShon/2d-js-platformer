@@ -40,6 +40,7 @@ collisionBlocks.forEach((row, y) => {
       collisionBlocks.push(
         new CollisionBlock({
           x: x * blockSize,
+          y: y * blockSize,
         })
       );
     }
