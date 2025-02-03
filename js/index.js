@@ -48,3 +48,7 @@ collisionBlocks.forEach((row, y) => {
     }
   });
 });
+
+const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
+  tilesData.forEach((row, y) => {});
+};
