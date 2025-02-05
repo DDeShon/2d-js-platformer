@@ -51,6 +51,9 @@ collisionBlocks.forEach((row, y) => {
 
 const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
   tilesData.forEach((row, y) => {
-    row.forEach((symbol, x) => {});
+    row.forEach((symbol, x) => {
+      if (symbol !== 0) {
+      }
+    });
   });
 };
