@@ -53,6 +53,8 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
   tilesData.forEach((row, y) => {
     row.forEach((symbol, x) => {
       if (symbol !== 0) {
+        const srcX =
+          ((symbol - 1) % (tilesetImage.width / tileSize)) * tileSize;
       }
     });
   });
