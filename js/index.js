@@ -42,8 +42,11 @@ collisionBlocks.forEach((row, y) => {
           x: x * blockSize,
           y: y * blockSize,
           size: blockSize
-        })
+        }),
       );
+    }
+    else if (symbol === 2) {
+      platforms.push()
     }
   });
 });
