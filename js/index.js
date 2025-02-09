@@ -46,7 +46,9 @@ collisionBlocks.forEach((row, y) => {
       );
     }
     else if (symbol === 2) {
-      platforms.push()
+      platforms.push(
+        new Platform({})
+      )
     }
   });
 });
