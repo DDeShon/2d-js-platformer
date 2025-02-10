@@ -47,7 +47,9 @@ collisionBlocks.forEach((row, y) => {
     }
     else if (symbol === 2) {
       platforms.push(
-        new Platform({})
+        new Platform({
+          x: x * blockSize,
+        })
       )
     }
   });
