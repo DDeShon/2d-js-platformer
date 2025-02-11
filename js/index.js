@@ -49,6 +49,7 @@ collisionBlocks.forEach((row, y) => {
       platforms.push(
         new Platform({
           x: x * blockSize,
+          y: y * blockSize + blockSize,
         })
       )
     }
