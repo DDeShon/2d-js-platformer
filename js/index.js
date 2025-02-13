@@ -51,6 +51,7 @@ collisionBlocks.forEach((row, y) => {
           x: x * blockSize,
           y: y * blockSize + blockSize,
           width: 16,
+          height: 4,
         })
       )
     }
