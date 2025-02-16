@@ -64,6 +64,10 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
       if (symbol !== 0) {
         const srcX = ((symbol - 1) % (tilesetImage.width / tileSize)) * tileSize;
         const srcY = Math.floor((symbol - 1) / (tilesetImage.width / tileSize)) * tileSize;
+
+        context.drawImage(
+          tilesetImage, // source image
+        )
       }
     });
   });
