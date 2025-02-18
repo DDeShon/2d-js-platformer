@@ -67,8 +67,10 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
 
         context.drawImage(
           tilesetImage, // source image
-          srcX,
-          srcY,
+          srcX, // source X
+          srcY, // source Y
+          tileSize, // source width
+          tileSize, // source height
         )
       }
     });
