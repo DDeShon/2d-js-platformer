@@ -73,6 +73,8 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
           tileSize, // source height
           x * 16, // destination X
           y * 16, // destination Y
+          16, // destination width
+          16 // destination height
         )
       }
     });
