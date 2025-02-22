@@ -80,3 +80,5 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
     });
   });
 };
+
+const renderStaticLayers = async()
