@@ -85,4 +85,5 @@ const renderStaticLayers = async() => {
   const offScreenCanvas = document.createElement('canvas');
   offScreenCanvas.width = canvas.width;
   offScreenCanvas.height = canvas.height;
+  const offscreenContext = offScreenCanvas.getContext('2d');
 }
