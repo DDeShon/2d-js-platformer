@@ -87,5 +87,7 @@ const renderStaticLayers = async() => {
   offScreenCanvas.height = canvas.height;
   const offscreenContext = offScreenCanvas.getContext('2d');
 
-  for (const [layerName, tilesData] of Object.entries(layersData)){}
+  for (const [layerName, tilesData] of Object.entries(layersData)){
+    const tilesetInfo = tilesets[layerName];
+  }
 }
