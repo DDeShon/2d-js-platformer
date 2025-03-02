@@ -89,6 +89,10 @@ const renderStaticLayers = async() => {
 
   for (const [layerName, tilesData] of Object.entries(layersData)){
     const tilesetInfo = tilesets[layerName];
-    if (tilesetInfo) {}
+    if (tilesetInfo) {
+      try {
+        
+      }
+    }
   }
 }
