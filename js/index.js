@@ -92,7 +92,12 @@ const renderStaticLayers = async() => {
     if (tilesetInfo) {
       try {
         const tilesetImage = await loadImage(tilesetInfo.imageUrl);
-        renderLayer{}
+        renderLayer(
+          tilesData,
+          tilesetImage,
+          tilesetInfo.tileSize,
+          offscreenContext,
+        )
       }
     }
   }
