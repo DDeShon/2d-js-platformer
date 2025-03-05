@@ -98,7 +98,7 @@ const renderStaticLayers = async() => {
           tilesetInfo.tileSize,
           offscreenContext,
         )
-      }
+      } catch (error) {}
     }
   }
 }
