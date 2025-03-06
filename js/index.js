@@ -98,7 +98,9 @@ const renderStaticLayers = async() => {
           tilesetInfo.tileSize,
           offscreenContext,
         )
-      } catch (error) {}
+      } catch (error) {
+        console.error("Failed to load image for layer ${layerName}!", error);
+      }
     }
   }
 }
