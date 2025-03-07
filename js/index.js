@@ -103,4 +103,6 @@ const renderStaticLayers = async() => {
       }
     }
   }
+
+  return offScreenCanvas
 }
