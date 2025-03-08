@@ -106,3 +106,5 @@ const renderStaticLayers = async() => {
 
   return offScreenCanvas
 }
+
+// END of Tile Setup
