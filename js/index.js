@@ -111,4 +111,9 @@ const renderStaticLayers = async () => {
 // END of Tile Setup
 
 // Change XY coordinates to move player's position
-const player = new Player({});
+const player = new Player({
+  x: 100,
+  y: 100,
+  size: 16,
+  velocity: { x: 0, y: 0 },
+});
