@@ -41,11 +41,10 @@ collisionBlocks.forEach((row, y) => {
         new CollisionBlock({
           x: x * blockSize,
           y: y * blockSize,
-          size: blockSize
-        }),
+          size: blockSize,
+        })
       );
-    }
-    else if (symbol === 2) {
+    } else if (symbol === 2) {
       platforms.push(
         new Platform({
           x: x * blockSize,
@@ -53,7 +52,7 @@ collisionBlocks.forEach((row, y) => {
           width: 16,
           height: 4,
         })
-      )
+      );
     }
   });
 });
@@ -62,8 +61,10 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
   tilesData.forEach((row, y) => {
     row.forEach((symbol, x) => {
       if (symbol !== 0) {
-        const srcX = ((symbol - 1) % (tilesetImage.width / tileSize)) * tileSize;
-        const srcY = Math.floor((symbol - 1) / (tilesetImage.width / tileSize)) * tileSize;
+        const srcX =
+          ((symbol - 1) % (tilesetImage.width / tileSize)) * tileSize;
+        const srcY =
+          Math.floor((symbol - 1) / (tilesetImage.width / tileSize)) * tileSize;
 
         context.drawImage(
           tilesetImage, // source image
@@ -75,19 +76,19 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
           y * 16, // destination Y
           16, // destination width
           16 // destination height
-        )
+        );
       }
     });
   });
 };
 
-const renderStaticLayers = async() => {
-  const offScreenCanvas = document.createElement('canvas');
+const renderStaticLayers = async () => {
+  const offScreenCanvas = document.createElement("canvas");
   offScreenCanvas.width = canvas.width;
   offScreenCanvas.height = canvas.height;
-  const offscreenContext = offScreenCanvas.getContext('2d');
+  const offscreenContext = offScreenCanvas.getContext("2d");
 
-  for (const [layerName, tilesData] of Object.entries(layersData)){
+  for (const [layerName, tilesData] of Object.entries(layersData)) {
     const tilesetInfo = tilesets[layerName];
     if (tilesetInfo) {
       try {
@@ -96,15 +97,18 @@ const renderStaticLayers = async() => {
           tilesData,
           tilesetImage,
           tilesetInfo.tileSize,
-          offscreenContext,
-        )
+          offscreenContext
+        );
       } catch (error) {
         console.error("Failed to load image for layer ${layerName}!", error);
       }
     }
   }
 
-  return offScreenCanvas
-}
+  return offScreenCanvas;
+};
 
 // END of Tile Setup
+
+// Change XY coordinates to move player's position
+const player = new Player({});
