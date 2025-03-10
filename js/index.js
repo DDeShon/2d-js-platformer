@@ -117,3 +117,9 @@ const player = new Player({
   size: 16,
   velocity: { x: 0, y: 0 },
 });
+
+const keys = {
+  w: {
+    pressed: false,
+  },
+};
