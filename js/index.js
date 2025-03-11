@@ -122,4 +122,7 @@ const keys = {
   w: {
     pressed: false,
   },
+  a: {
+    pressed: false,
+  }
 };
