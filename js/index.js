@@ -129,3 +129,5 @@ const keys = {
     pressed: false,
   },
 };
+
+let lastTime = performance.now();
