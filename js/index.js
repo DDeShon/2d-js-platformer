@@ -131,4 +131,6 @@ const keys = {
 };
 
 let lastTime = performance.now();
-function animate(backgroundCanvas) {}
+function animate(backgroundCanvas) {
+  const currentTime = performance.now();
+}
