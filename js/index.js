@@ -133,4 +133,5 @@ const keys = {
 let lastTime = performance.now();
 function animate(backgroundCanvas) {
   const currentTime = performance.now();
+  const deltaTime = (currentTime - lastTime) / 1000;
 }
