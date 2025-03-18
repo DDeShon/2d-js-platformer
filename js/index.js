@@ -138,4 +138,5 @@ function animate(backgroundCanvas) {
 
   // Update player position
   player.handleInput(keys);
+  player.update(deltaTime, collisionBlocks);
 }
