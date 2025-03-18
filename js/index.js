@@ -135,4 +135,7 @@ function animate(backgroundCanvas) {
   const currentTime = performance.now();
   const deltaTime = (currentTime - lastTime) / 1000;
   lastTime = currentTime;
+
+  // Update player position
+  player.handleInput(keys);
 }
