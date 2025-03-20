@@ -142,4 +142,6 @@ function animate(backgroundCanvas) {
 
   // Render scene
   c.save();
+  c.scale(dpr, dpr);
+  c.clearRect(0, 0, canvas.width, canvas.height);
 }
