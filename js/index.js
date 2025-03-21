@@ -144,4 +144,6 @@ function animate(backgroundCanvas) {
   c.save();
   c.scale(dpr, dpr);
   c.clearRect(0, 0, canvas.width, canvas.height);
+  c.drawImage(backgroundCanvas, 0, 0);
+  player.draw(c);
 }
