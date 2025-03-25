@@ -147,4 +147,6 @@ function animate(backgroundCanvas) {
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
   c.restore();
+
+  requestAnimationFrame(() => animate(backgroundCanvas));
 }
