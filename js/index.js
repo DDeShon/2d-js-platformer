@@ -149,10 +149,10 @@ function animate(backgroundCanvas) {
   c.restore();
 
   requestAnimationFrame(() => animate(backgroundCanvas));
-}
+};
 
 const startRendering = async () => {
   try {
-    
+
   }
-}
+};
