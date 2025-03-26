@@ -150,3 +150,9 @@ function animate(backgroundCanvas) {
 
   requestAnimationFrame(() => animate(backgroundCanvas));
 }
+
+const startRendering = async () => {
+  try {
+    
+  }
+}
