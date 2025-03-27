@@ -153,6 +153,6 @@ function animate(backgroundCanvas) {
 
 const startRendering = async () => {
   try {
-
+    const backgroundCanvas = await renderStaticLayers()
   }
 };
