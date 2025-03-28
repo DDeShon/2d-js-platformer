@@ -154,5 +154,9 @@ function animate(backgroundCanvas) {
 const startRendering = async () => {
   try {
     const backgroundCanvas = await renderStaticLayers()
+    if (!backgroundCanvas) {
+      console.error("Failed to create the background canvas")
+      return
+    }
   }
 };
