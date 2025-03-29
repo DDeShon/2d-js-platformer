@@ -158,5 +158,7 @@ const startRendering = async () => {
       console.error("Failed to create the background canvas")
       return
     }
-  }
+
+    animate(backgroundCanvas);
+  } catch (error)
 };
