@@ -150,16 +150,16 @@ function animate(backgroundCanvas) {
   c.restore();
 
   requestAnimationFrame(() => animate(backgroundCanvas));
-};
+}
 
 const startRendering = async () => {
   try {
-    const backgroundCanvas = await renderStaticLayers()
+    const backgroundCanvas = await renderStaticLayers();
     if (!backgroundCanvas) {
-      console.error("Failed to create the background canvas")
-      return
+      console.error("Failed to create the background canvas");
+      return;
     }
 
     animate(backgroundCanvas);
-  } catch (error)
+  } catch (error) {}
 };
