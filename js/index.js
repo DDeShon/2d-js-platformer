@@ -143,6 +143,7 @@ function animate(backgroundCanvas) {
   // Render scene
   c.save();
   c.scale(dpr, dpr);
+  c.translate();
   c.clearRect(0, 0, canvas.width, canvas.height);
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
