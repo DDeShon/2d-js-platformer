@@ -131,6 +131,11 @@ const keys = {
 };
 
 let lastTime = performance.now();
+const camera = {
+  x: 0,
+  y: 0,
+};
+
 function animate(backgroundCanvas) {
   const currentTime = performance.now();
   const deltaTime = (currentTime - lastTime) / 1000;
