@@ -137,6 +137,7 @@ const camera = {
 };
 
 function animate(backgroundCanvas) {
+  // Calculate delta time
   const currentTime = performance.now();
   const deltaTime = (currentTime - lastTime) / 1000;
   lastTime = currentTime;
