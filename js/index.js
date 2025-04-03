@@ -132,7 +132,7 @@ const keys = {
 
 let lastTime = performance.now();
 const camera = {
-  x: 0,
+  x: 300,
   y: 0,
 };
 
