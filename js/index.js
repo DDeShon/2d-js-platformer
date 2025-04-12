@@ -148,6 +148,8 @@ function animate(backgroundCanvas) {
   player.handleInput(keys);
   player.update(deltaTime, collisionBlocks);
 
+  // Track scroll position distance
+
   // Render scene
   c.save();
   c.scale(dpr, dpr);
