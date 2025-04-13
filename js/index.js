@@ -148,7 +148,8 @@ function animate(backgroundCanvas) {
   player.handleInput(keys);
   player.update(deltaTime, collisionBlocks);
 
-  // Track scroll position distance
+  // Track scroll post distance
+  const scrollPostDistance = player.x - SCROLL_POST_RIGHT;
 
   // Render scene
   c.save();
