@@ -150,6 +150,7 @@ function animate(backgroundCanvas) {
 
   // Track scroll post distance
   const scrollPostDistance = player.x - SCROLL_POST_RIGHT;
+  camera.x = scrollPostDistance;
 
   // Render scene
   c.save();
