@@ -149,9 +149,10 @@ function animate(backgroundCanvas) {
   player.update(deltaTime, collisionBlocks);
 
   // Track scroll post distance
-  const scrollPostDistance = player.x - SCROLL_POST_RIGHT;
-  camera.x = scrollPostDistance;
-
+  if (player.x > SCROLL_POST_RIGHT) {
+    const scrollPostDistance = player.x - SCROLL_POST_RIGHT;
+    camera.x = scrollPostDistance;
+  }
   // Render scene
   c.save();
   c.scale(dpr, dpr);
