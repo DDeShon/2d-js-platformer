@@ -137,7 +137,7 @@ const camera = {
 };
 
 const SCROLL_POST_RIGHT = 500;
-const SCROLL_POST_TOP = 500;
+const SCROLL_POST_TOP = 200;
 
 function animate(backgroundCanvas) {
   // Calculate delta time
