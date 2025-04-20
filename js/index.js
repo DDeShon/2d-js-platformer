@@ -155,6 +155,11 @@ function animate(backgroundCanvas) {
     camera.x = scrollPostDistance;
   }
 
+  if (player.y < SCROLL_POST_TOP) {
+    const scrollPostDistance = SCROLL_POST_TOP - player.y;
+    camera.y = scrollPostDistance;
+  }
+
   // Render scene
   c.save();
   c.scale(dpr, dpr);
