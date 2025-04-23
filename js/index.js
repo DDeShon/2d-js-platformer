@@ -170,6 +170,7 @@ function animate(backgroundCanvas) {
   player.draw(c);
   c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
   c.fillRect(300, SCROLL_POST_TOP, 100, 10);
+  c.fillRect(300, SCROLL_POST_BOTTOM, 100, 10);
   c.restore();
 
   requestAnimationFrame(() => animate(backgroundCanvas));
