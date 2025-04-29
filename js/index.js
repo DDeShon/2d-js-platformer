@@ -161,7 +161,7 @@ function animate(backgroundCanvas) {
     camera.y = scrollPostDistance;
   }
 
-  if (player.y < SCROLL_POST_BOTTOM && camera.y > 0) {
+  if (player.y > SCROLL_POST_BOTTOM) {
     const scrollPostDistance = SCROLL_POST_BOTTOM - player.y;
     camera.y = scrollPostDistance;
   }
