@@ -162,7 +162,7 @@ function animate(backgroundCanvas) {
   }
 
   if (player.y > SCROLL_POST_BOTTOM) {
-    const scrollPostDistance = SCROLL_POST_BOTTOM + player.y;
+    const scrollPostDistance = player.y - SCROLL_POST_BOTTOM;
     camera.y = scrollPostDistance;
   }
 
