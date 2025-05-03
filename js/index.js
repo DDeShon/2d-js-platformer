@@ -163,7 +163,7 @@ function animate(backgroundCanvas) {
 
   if (player.y > SCROLL_POST_BOTTOM) {
     const scrollPostDistance = player.y - SCROLL_POST_BOTTOM;
-    camera.y = scrollPostDistance;
+    camera.y = -scrollPostDistance;
   }
 
   // Render scene
