@@ -9,5 +9,10 @@ class Player {
     this.width = size;
     this.height = size;
     this.velocity = velocity;
+    this.isOnGround = false;
+  }
+
+  draw(c) {
+    // Red square debug code
   }
 }
