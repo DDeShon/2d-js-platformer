@@ -17,4 +17,8 @@ class Player {
     c.fillStyle = "rgba(255, 0, 0, 0.5)";
     c.fillRect(this.x, this.y, this.width, this.height);
   }
+
+  update(deltaTime, collisionBlocks){
+    if (!deltaTime) return;
+  }
 }
