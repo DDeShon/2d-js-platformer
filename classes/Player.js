@@ -20,5 +20,6 @@ class Player {
 
   update(deltaTime, collisionBlocks){
     if (!deltaTime) return;
+    this.applyGravity(deltaTime);
   }
 }
