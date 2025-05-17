@@ -21,5 +21,8 @@ class Player {
   update(deltaTime, collisionBlocks){
     if (!deltaTime) return;
     this.applyGravity(deltaTime);
+
+    // Update horizontal position and check collisions
+    this.updateHorizontalPosition(deltaTime);
   }
 }
