@@ -24,5 +24,6 @@ class Player {
 
     // Update horizontal position and check collisions
     this.updateHorizontalPosition(deltaTime);
+    this.checkForHorizontalCollisions(collisionBlocks);
   }
 }
