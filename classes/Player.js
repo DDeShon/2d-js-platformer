@@ -11,6 +11,7 @@ class Player {
     this.velocity = velocity;
     this.isOnGround = false;
     this.image = new Image();
+    this.image.src = './images/player.png';
   }
 
   draw(c) {
