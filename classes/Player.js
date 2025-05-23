@@ -18,6 +18,8 @@ class Player {
     // Red square debug code
     c.fillStyle = "rgba(255, 0, 0, 0.5)";
     c.fillRect(this.x, this.y, this.width, this.height);
+
+    c.drawImage(this.image, this.x, this.y);
   }
 
   update(deltaTime, collisionBlocks){
