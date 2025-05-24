@@ -10,6 +10,7 @@ class Player {
     this.height = size;
     this.velocity = velocity;
     this.isOnGround = false;
+    this.isImageLoaded = false;
     this.image = new Image();
     this.image.src = './images/player.png';
   }
