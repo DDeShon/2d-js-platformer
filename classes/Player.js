@@ -12,6 +12,9 @@ class Player {
     this.isOnGround = false;
     this.isImageLoaded = false;
     this.image = new Image();
+    this.image.onload = () => {
+      this.isImageLoaded = true;
+    }
     this.image.src = './images/player.png';
   }
 
