@@ -14,8 +14,9 @@ class Player {
     this.image = new Image();
     this.image.onload = () => {
       this.isImageLoaded = true;
-    }
-    this.image.src = './images/player.png';
+    };
+    this.image.src = "./images/player.png";
+    this.elapsedTime = 0;
   }
 
   draw(c) {
@@ -26,10 +27,9 @@ class Player {
     if (this.isImageLoaded === true) {
       c.drawImage(this.image, this.x, this.y);
     }
-    
   }
 
-  update(deltaTime, collisionBlocks){
+  update(deltaTime, collisionBlocks) {
     if (!deltaTime) return;
     this.applyGravity(deltaTime);
 
