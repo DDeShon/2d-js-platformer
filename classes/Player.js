@@ -17,6 +17,7 @@ class Player {
     };
     this.image.src = "./images/player.png";
     this.elapsedTime = 0;
+    this.currentFrame = 0;
   }
 
   draw(c) {
