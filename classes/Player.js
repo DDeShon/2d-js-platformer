@@ -26,6 +26,10 @@ class Player {
     c.fillRect(this.x, this.y, this.width, this.height);
 
     if (this.isImageLoaded === true) {
+      const cropbox = {
+        x: 0,
+        y: 0,
+      };
       c.drawImage(this.image, this.x, this.y);
     }
   }
