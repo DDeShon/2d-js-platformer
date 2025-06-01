@@ -32,7 +32,13 @@ class Player {
         width: 32,
         height: 32,
       };
-      c.drawImage(this.image, cropbox.x, cropbox.y);
+      c.drawImage(
+        this.image,
+        cropbox.x,
+        cropbox.y,
+        cropbox.width,
+        cropbox.height
+      );
     }
   }
 
