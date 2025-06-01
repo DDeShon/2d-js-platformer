@@ -37,7 +37,9 @@ class Player {
         cropbox.x,
         cropbox.y,
         cropbox.width,
-        cropbox.height
+        cropbox.height,
+        this.x,
+        this.y
       );
     }
   }
