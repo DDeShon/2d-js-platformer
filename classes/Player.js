@@ -48,6 +48,10 @@ class Player {
 
   update(deltaTime, collisionBlocks) {
     if (!deltaTime) return;
+
+    // Update animation frames
+    this.elapsedTime += deltaTime;
+
     this.applyGravity(deltaTime);
 
     // Update horizontal position and check collisions
