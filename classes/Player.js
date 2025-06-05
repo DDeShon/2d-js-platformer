@@ -52,6 +52,7 @@ class Player {
     // Update animation frames
     this.elapsedTime += deltaTime;
     if (this.elapsedTime > 0.1) {
+      this.currentFrame++;
     }
 
     this.applyGravity(deltaTime);
