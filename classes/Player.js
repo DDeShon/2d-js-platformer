@@ -51,6 +51,7 @@ class Player {
 
     // Update animation frames
     this.elapsedTime += deltaTime;
+    const secondsInterval = 0.1;
     if (this.elapsedTime > 0.1) {
       this.currentFrame = (this.currentFrame + 1) % 4;
     }
