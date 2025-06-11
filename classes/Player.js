@@ -53,7 +53,7 @@ class Player {
     this.elapsedTime += deltaTime;
     const secondsInterval = 0.1;
     if (this.elapsedTime > secondsInterval) {
-      this.currentFrame = (this.currentFrame + 1) % 5;
+      this.currentFrame = (this.currentFrame + 1) % 4;
       this.elapsedTime -= secondsInterval;
     }
 
