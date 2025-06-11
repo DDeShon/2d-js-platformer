@@ -34,7 +34,7 @@ class Player {
       };
       c.drawImage(
         this.image,
-        cropbox.x,
+        cropbox.x + cropbox.width * this.currentFrame,
         cropbox.y,
         cropbox.width,
         cropbox.height,
