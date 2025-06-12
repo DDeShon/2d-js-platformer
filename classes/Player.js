@@ -29,7 +29,7 @@ class Player {
       const cropbox = {
         x: 0,
         y: 0,
-        width: 32,
+        width: 33,
         height: 32,
       };
       c.drawImage(
