@@ -18,6 +18,14 @@ class Player {
     this.image.src = "./images/player.png";
     this.elapsedTime = 0;
     this.currentFrame = 0;
+    this.sprites = {
+      idle: {
+        x: 0,
+        y: 0,
+        width: 33,
+        height: 32,
+      }
+    }
   }
 
   draw(c) {
@@ -26,13 +34,7 @@ class Player {
     c.fillRect(this.x, this.y, this.width, this.height);
 
     if (this.isImageLoaded === true) {
-      const cropbox = {
-        x: 0,
-        y: 0,
-        width: 33,
-        height: 32,
-      };
-      c.drawImage(
+        c.drawImage(
         this.image,
         cropbox.x + cropbox.width * this.currentFrame,
         cropbox.y,
