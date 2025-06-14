@@ -26,6 +26,7 @@ class Player {
         height: 32,
       }
     }
+    this.currentSprite = this.sprites.idle;
   }
 
   draw(c) {
