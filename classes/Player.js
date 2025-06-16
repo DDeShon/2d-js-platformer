@@ -37,10 +37,10 @@ class Player {
     if (this.isImageLoaded === true) {
         c.drawImage(
         this.image,
-        cropbox.x + cropbox.width * this.currentFrame,
-        cropbox.y,
-        cropbox.width,
-        cropbox.height,
+        this.currentSprite.x + this.currentSprite.width * this.currentFrame,
+        this.currentSprite.y,
+        this.currentSprite.width,
+        this.currentSprite.height,
         this.x,
         this.y,
         this.width,
