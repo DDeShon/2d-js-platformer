@@ -27,12 +27,12 @@ class Player {
       }
       run: {
         x: 0,
-        y: 0,
+        y: 32,
         width: 33,
         height: 32,
       }
     }
-    this.currentSprite = this.sprites.idle;
+    this.currentSprite = this.sprites.run;
   }
 
   draw(c) {
