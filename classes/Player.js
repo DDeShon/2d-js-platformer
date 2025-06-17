@@ -25,6 +25,12 @@ class Player {
         width: 33,
         height: 32,
       }
+      run: {
+        x: 0,
+        y: 0,
+        width: 33,
+        height: 32,
+      }
     }
     this.currentSprite = this.sprites.idle;
   }
