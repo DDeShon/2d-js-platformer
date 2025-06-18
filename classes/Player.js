@@ -24,14 +24,16 @@ class Player {
         y: 0,
         width: 33,
         height: 32,
-      }
+        frames: 4,
+      },
       run: {
         x: 0,
         y: 32,
         width: 33,
         height: 32,
-      }
-    }
+        frames: 6,
+      },
+    };
     this.currentSprite = this.sprites.run;
   }
 
@@ -41,7 +43,7 @@ class Player {
     c.fillRect(this.x, this.y, this.width, this.height);
 
     if (this.isImageLoaded === true) {
-        c.drawImage(
+      c.drawImage(
         this.image,
         this.currentSprite.x + this.currentSprite.width * this.currentFrame,
         this.currentSprite.y,
@@ -62,7 +64,7 @@ class Player {
     this.elapsedTime += deltaTime;
     const secondsInterval = 0.1;
     if (this.elapsedTime > secondsInterval) {
-      this.currentFrame = (this.currentFrame + 1) % 4;
+      this.currentFrame = (this.currentFrame + 1) % this.currentSprite.frames;
       this.elapsedTime -= secondsInterval;
     }
 
