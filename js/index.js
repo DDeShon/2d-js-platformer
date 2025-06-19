@@ -1,6 +1,6 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
-const dpr = window.devicePixelRatio || 1;
+const dpr = 2;
 
 canvas.width = 1024 * dpr;
 canvas.height = 576 * dpr;
@@ -9,24 +9,24 @@ const layersData = {
   l_New_Layer_1: l_New_Layer_1,
   l_New_Layer_2: l_New_Layer_2,
   l_New_Layer_8: l_New_Layer_8,
-  l_New_Layer_3: l_New_Layer_3,
+  // l_New_Layer_3: l_New_Layer_3,
   l_Decorations: l_Decorations,
-  l_New_Layer_5: l_New_Layer_5,
-  l_New_Layer_6: l_New_Layer_6,
-  l_New_Layer_9: l_New_Layer_9,
-  l_New_Layer_9_1: l_New_Layer_9_1,
+  // l_New_Layer_5: l_New_Layer_5,
+  // l_New_Layer_6: l_New_Layer_6,
+  // l_New_Layer_9: l_New_Layer_9,
+  // l_New_Layer_9_1: l_New_Layer_9_1,
 };
 
 const tilesets = {
   l_New_Layer_1: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_2: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_8: { imageUrl: "./images/tileset.png", tileSize: 16 },
-  l_New_Layer_3: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  // l_New_Layer_3: { imageUrl: "./images/tileset.png", tileSize: 16 },
   l_Decorations: { imageUrl: "./images/decorations.png", tileSize: 16 },
-  l_New_Layer_5: { imageUrl: "./images/tileset.png", tileSize: 16 },
-  l_New_Layer_6: { imageUrl: "./images/decorations.png", tileSize: 16 },
-  l_New_Layer_9: { imageUrl: "./images/decorations.png", tileSize: 16 },
-  l_New_Layer_9_1: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  // l_New_Layer_5: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  // l_New_Layer_6: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  // l_New_Layer_9: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  // l_New_Layer_9_1: { imageUrl: "./images/tileset.png", tileSize: 16 },
 };
 
 // Tile Setup
@@ -82,11 +82,11 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
   });
 };
 
-const renderStaticLayers = async () => {
-  const offScreenCanvas = document.createElement("canvas");
-  offScreenCanvas.width = canvas.width;
-  offScreenCanvas.height = canvas.height;
-  const offscreenContext = offScreenCanvas.getContext("2d");
+const renderStaticLayers = async (layersData) => {
+  const offscreenCanvas = document.createElement("canvas");
+  offscreenCanvas.width = canvas.width;
+  offscreenCanvas.height = canvas.height;
+  const offscreenContext = offscreenCanvas.getContext("2d");
 
   for (const [layerName, tilesData] of Object.entries(layersData)) {
     const tilesetInfo = tilesets[layerName];
@@ -105,7 +105,7 @@ const renderStaticLayers = async () => {
     }
   }
 
-  return offScreenCanvas;
+  return offscreenCanvas;
 };
 
 // END of Tile Setup
@@ -168,7 +168,7 @@ function animate(backgroundCanvas) {
 
   // Render scene
   c.save();
-  c.scale(dpr, dpr);
+  c.scale(dpr + 1, dpr + 1);
   c.translate(-camera.x, camera.y);
   c.clearRect(0, 0, canvas.width, canvas.height);
   c.drawImage(backgroundCanvas, 0, 0);
@@ -185,12 +185,14 @@ function animate(backgroundCanvas) {
 
 const startRendering = async () => {
   try {
-    const backgroundCanvas = await renderStaticLayers();
+    const backgroundCanvas = await renderStaticLayers(layersData);
     if (!backgroundCanvas) {
       console.error("Failed to create the background canvas");
       return;
     }
 
     animate(backgroundCanvas);
-  } catch (error) {}
+  } catch (error) {
+    console.error("Error during rendering: ", error);
+  }
 };
