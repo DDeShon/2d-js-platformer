@@ -76,5 +76,9 @@ class Player {
 
     // Check for any platform collisions
     this.checkPlatformCollisions(platforms, deltaTime);
+
+    // Update vertical position and check collisions
+    this.updateVerticalPosition(deltaTime);
+    this.checkForVerticalCollisions(collisionBlocks);
   }
 }
