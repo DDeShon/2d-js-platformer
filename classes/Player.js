@@ -34,7 +34,7 @@ class Player {
         frames: 6,
       },
     };
-    this.currentSprite = this.sprites.run;
+    this.currentSprite = this.sprites.idle;
   }
 
   draw(c) {
