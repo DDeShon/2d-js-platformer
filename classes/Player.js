@@ -80,5 +80,7 @@ class Player {
     // Update vertical position and check collisions
     this.updateVerticalPosition(deltaTime);
     this.checkForVerticalCollisions(collisionBlocks);
+
+    this.switchSprites();
   }
 }
