@@ -83,4 +83,9 @@ class Player {
 
     this.switchSprites();
   }
+
+  jump() {
+    this.velocity.y = -JUMP_POWER;
+    this.isOnGround = false;
+  }
 }
