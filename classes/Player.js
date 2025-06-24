@@ -88,4 +88,8 @@ class Player {
     this.velocity.y = -JUMP_POWER;
     this.isOnGround = false;
   }
+
+  updateHorizontalPosition(deltaTime) {
+    this.x += this.velocity.x * deltaTime;
+  }
 }
