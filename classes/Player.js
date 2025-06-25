@@ -92,4 +92,8 @@ class Player {
   updateHorizontalPosition(deltaTime) {
     this.x += this.velocity.x * deltaTime;
   }
+
+  updateverticalPosition(deltaTime) {
+    this.y += this.velocity.y * deltaTime;
+  }
 }
