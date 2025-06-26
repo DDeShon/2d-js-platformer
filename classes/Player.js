@@ -84,6 +84,12 @@ class Player {
     this.switchSprites();
   }
 
+  switchSprites() {
+    if (this.isOnGround && this.velocity.x === 0) {
+      this.currentSprite = this.sprites.idle;
+    }
+  }
+
   jump() {
     this.velocity.y = -JUMP_POWER;
     this.isOnGround = false;
