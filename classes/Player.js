@@ -91,6 +91,12 @@ class Player {
       this.currentSprite !== this.sprites.idle
     ) {
       this.currentSprite = this.sprites.idle;
+    } else if (
+      this.isOnGround &&
+      this.velocity.x !== 0 &&
+      this.currentSprite !== this.sprites.run
+    ) {
+      this.currentSprite = this.sprites.run;
     }
   }
 
