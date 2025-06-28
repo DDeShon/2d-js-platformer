@@ -90,6 +90,7 @@ class Player {
       this.velocity.x === 0 &&
       this.currentSprite !== this.sprites.idle
     ) {
+      this.currentFrame = 0;
       this.currentSprite = this.sprites.idle;
     } else if (
       this.isOnGround &&
