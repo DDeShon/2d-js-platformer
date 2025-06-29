@@ -97,6 +97,7 @@ class Player {
       this.velocity.x !== 0 &&
       this.currentSprite !== this.sprites.run
     ) {
+      this.currentFrame = 0;
       this.currentSprite = this.sprites.run;
     }
   }
