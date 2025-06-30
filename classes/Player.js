@@ -90,6 +90,7 @@ class Player {
       this.velocity.x === 0 &&
       this.currentSprite !== this.sprites.idle
     ) {
+      // Idle
       this.currentFrame = 0;
       this.currentSprite = this.sprites.idle;
     } else if (
@@ -97,6 +98,7 @@ class Player {
       this.velocity.x !== 0 &&
       this.currentSprite !== this.sprites.run
     ) {
+      // Run
       this.currentFrame = 0;
       this.currentSprite = this.sprites.run;
     }
