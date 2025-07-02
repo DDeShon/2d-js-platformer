@@ -40,6 +40,13 @@ class Player {
         height: 32,
         frames: 6,
       },
+      fall: {
+        x: 0,
+        y: 32 * 5,
+        width: 33,
+        height: 32,
+        frames: 6,
+      },
     };
     this.currentSprite = this.sprites.idle;
   }
