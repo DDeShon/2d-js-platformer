@@ -41,7 +41,7 @@ class Player {
         frames: 6,
       },
       fall: {
-        x: 0,
+        x: 33,
         y: 32 * 5,
         width: 33,
         height: 32,
