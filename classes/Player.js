@@ -116,10 +116,14 @@ class Player {
       this.currentFrame = 0;
       this.currentSprite = this.sprites.run;
     } else if (
-      !this.isOnGround && 
+      !this.isOnGround &&
       this.velocity.y < 0 &&
-      this.currentSprite !== this.sprites.jump){}
-    )
+      this.currentSprite !== this.sprites.jump
+    ) {
+      // Jump
+      this.currentFrame = 0;
+      this.currentSprite = this.sprites.jump;
+    }
   }
 
   jump() {
