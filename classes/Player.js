@@ -38,14 +38,14 @@ class Player {
         y: 32 * 5,
         width: 33,
         height: 32,
-        frames: 6,
+        frames: 1,
       },
       fall: {
         x: 33,
         y: 32 * 5,
         width: 33,
         height: 32,
-        frames: 6,
+        frames: 1,
       },
     };
     this.currentSprite = this.sprites.idle;
