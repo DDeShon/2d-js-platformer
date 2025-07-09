@@ -125,7 +125,7 @@ class Player {
       this.currentSprite = this.sprites.jump;
     } else if (
       !this.isOnGround &&
-      this.velocity.y < 0 &&
+      this.velocity.y > 0 &&
       this.currentSprite !== this.sprites.fall
     ) {
       // Fall
