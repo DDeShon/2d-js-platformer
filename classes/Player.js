@@ -49,6 +49,7 @@ class Player {
       },
     };
     this.currentSprite = this.sprites.idle;
+    this.facing = "right";
   }
 
   draw(c) {
