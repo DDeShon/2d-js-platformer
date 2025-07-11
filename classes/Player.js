@@ -96,6 +96,7 @@ class Player {
     this.updateVerticalPosition(deltaTime);
     this.checkForVerticalCollisions(collisionBlocks);
 
+    this.determineDirection();
     this.switchSprites();
   }
 
