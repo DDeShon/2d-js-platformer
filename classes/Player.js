@@ -100,6 +100,12 @@ class Player {
     this.switchSprites();
   }
 
+  determineDirection() {
+    if (this.velocity.x > 0) {
+      this.facing = "right";
+    }
+  }
+
   switchSprites() {
     if (
       this.isOnGround &&
