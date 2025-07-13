@@ -103,6 +103,8 @@ class Player {
   determineDirection() {
     if (this.velocity.x > 0) {
       this.facing = "right";
+    } else if (this.velocity.x < 0) {
+      this.facing = "left";
     }
   }
 
