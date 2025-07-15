@@ -73,6 +73,8 @@ class Player {
         this.width,
         this.height
       );
+
+      c.restore();
     }
   }
 
