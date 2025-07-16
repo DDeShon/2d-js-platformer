@@ -68,7 +68,7 @@ class Player {
         this.currentSprite.y,
         this.currentSprite.width,
         this.currentSprite.height,
-        this.x,
+        -this.x - this.width,
         this.y,
         this.width,
         this.height
