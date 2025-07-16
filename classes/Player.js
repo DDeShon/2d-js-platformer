@@ -58,9 +58,10 @@ class Player {
     c.fillRect(this.x, this.y, this.width, this.height);
 
     if (this.isImageLoaded === true) {
+      let xScale = 1;
       c.save();
 
-      c.scale(-1, 1);
+      c.scale(xScale, 1);
 
       c.drawImage(
         this.image,
