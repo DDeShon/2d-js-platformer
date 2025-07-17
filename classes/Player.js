@@ -59,6 +59,13 @@ class Player {
 
     if (this.isImageLoaded === true) {
       let xScale = 1;
+      let x = this.x;
+
+      if (this.facing === "left") {
+        xScale = -1;
+        x = -this.x - this.width;
+      }
+
       c.save();
 
       c.scale(xScale, 1);
