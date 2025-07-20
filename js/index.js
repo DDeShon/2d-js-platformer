@@ -5,9 +5,16 @@ const dpr = 2;
 canvas.width = 1024 * dpr;
 canvas.height = 576 * dpr;
 
-const layersData = {
+const oceanLayerData = {
   l_New_Layer_1: l_New_Layer_1,
+}
+
+const brambleLayerData = {
   l_New_Layer_2: l_New_Layer_2,
+}
+
+const layersData = {
+  
   l_New_Layer_8: l_New_Layer_8,
   // l_New_Layer_3: l_New_Layer_3,
   l_Decorations: l_Decorations,
