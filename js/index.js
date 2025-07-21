@@ -192,6 +192,7 @@ function animate(backgroundCanvas) {
 
 const startRendering = async () => {
   try {
+    const oceanBackgroundCanvas = await renderStaticLayers(oceanLayerData);
     const backgroundCanvas = await renderStaticLayers(layersData);
     if (!backgroundCanvas) {
       console.error("Failed to create the background canvas");
