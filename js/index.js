@@ -146,6 +146,7 @@ const camera = {
 const SCROLL_POST_RIGHT = 500;
 const SCROLL_POST_TOP = 100;
 const SCROLL_POST_BOTTOM = 200;
+let oceanBackgroundCanvas = null;
 
 function animate(backgroundCanvas) {
   // Calculate delta time
@@ -178,6 +179,7 @@ function animate(backgroundCanvas) {
   c.scale(dpr + 1, dpr + 1);
   c.translate(-camera.x, camera.y);
   c.clearRect(0, 0, canvas.width, canvas.height);
+  c.drawImage(oceanBackgroundCanvas, 0, 0);
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
 
@@ -192,7 +194,7 @@ function animate(backgroundCanvas) {
 
 const startRendering = async () => {
   try {
-    const oceanBackgroundCanvas = await renderStaticLayers(oceanLayerData);
+    oceanBackgroundCanvas = await renderStaticLayers(oceanLayerData);
     const backgroundCanvas = await renderStaticLayers(layersData);
     if (!backgroundCanvas) {
       console.error("Failed to create the background canvas");
