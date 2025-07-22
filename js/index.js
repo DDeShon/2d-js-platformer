@@ -181,7 +181,7 @@ function animate(backgroundCanvas) {
   c.translate(-camera.x, camera.y);
   c.clearRect(0, 0, canvas.width, canvas.height);
   c.drawImage(oceanBackgroundCanvas, camera.x * 0.32, 0);
-  c.drawImage(brambleBackgroundCanvas, 0, 0);
+  c.drawImage(brambleBackgroundCanvas, camera.x * 0.16, 0);
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
 
