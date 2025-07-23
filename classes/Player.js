@@ -50,6 +50,12 @@ class Player {
     };
     this.currentSprite = this.sprites.idle;
     this.facing = "right";
+    this.hitbox = {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    }
   }
 
   draw(c) {
