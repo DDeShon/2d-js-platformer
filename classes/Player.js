@@ -53,8 +53,8 @@ class Player {
     this.hitbox = {
       x: 0,
       y: 0,
-      width: 0,
-      height: 0
+      width: 20,
+      height: 20
     }
   }
 
@@ -62,6 +62,10 @@ class Player {
     // Red square debug code
     c.fillStyle = "rgba(255, 0, 0, 0.5)";
     c.fillRect(this.x, this.y, this.width, this.height);
+
+    // Hitbox debug code
+    c.fillStyle = "rgba(0, 0, 255, 0.5)";
+    c.fillRect(this.hitbox.x, this.hitbox.y, this.hitbox.width, this.hitbox.height);
 
     if (this.isImageLoaded === true) {
       let xScale = 1;
