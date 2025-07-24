@@ -107,6 +107,10 @@ class Player {
       this.elapsedTime -= secondsInterval;
     }
 
+    // Update hitbox position
+    this.hitbox.x = this.x;
+    this.hitbox.y = this.y;
+
     this.applyGravity(deltaTime);
 
     // Update horizontal position and check collisions
