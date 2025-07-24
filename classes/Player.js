@@ -54,7 +54,7 @@ class Player {
       x: 0,
       y: 0,
       width: 20,
-      height: 20
+      height: 23
     }
   }
 
@@ -108,8 +108,8 @@ class Player {
     }
 
     // Update hitbox position
-    this.hitbox.x = this.x;
-    this.hitbox.y = this.y;
+    this.hitbox.x = this.x + 4;
+    this.hitbox.y = this.y + 9;
 
     this.applyGravity(deltaTime);
 
