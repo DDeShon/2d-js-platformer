@@ -179,6 +179,7 @@ class Player {
 
   updateHorizontalPosition(deltaTime) {
     this.x += this.velocity.x * deltaTime;
+    this.hitbox.x += this.velocity.x * deltaTime;
   }
 
   updateverticalPosition(deltaTime) {
