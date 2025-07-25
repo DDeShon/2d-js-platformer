@@ -185,4 +185,8 @@ class Player {
   updateverticalPosition(deltaTime) {
     this.y += this.velocity.y * deltaTime;
   }
+
+  checkForHorizontalCollisions(collisionBlocks) {
+    const buffer = 0.0001;
+  }
 }
