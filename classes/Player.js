@@ -190,6 +190,11 @@ class Player {
     const buffer = 0.0001;
     for (l let i = 0; i < collisionBlocks.length; i++) {
       const collisionBlock = collisionBlocks[i];
+
+      // Check if a collision exists on all axes
+      if (
+        this.x <= collisionBlock.x + collisionBlock.width &&
+      )
     }
   }
 }
