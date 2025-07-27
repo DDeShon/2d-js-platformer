@@ -194,6 +194,7 @@ class Player {
       // Check if a collision exists on all axes
       if (
         this.x <= collisionBlock.x + collisionBlock.width &&
+        this.x + this.width >= collisionBlock.x &&
       )
     }
   }
