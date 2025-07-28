@@ -195,6 +195,8 @@ class Player {
       if (
         this.x <= collisionBlock.x + collisionBlock.width &&
         this.x + this.width >= collisionBlock.x &&
+        this.y + this.height >= collisionBlock.y &&
+        this.y <= collisionBlock.y + collisionBlock.height
       )
     }
   }
