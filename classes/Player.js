@@ -197,7 +197,10 @@ class Player {
         this.x + this.width >= collisionBlock.x &&
         this.y + this.height >= collisionBlock.y &&
         this.y <= collisionBlock.y + collisionBlock.height
-      )
+      ) {
+        // Check collision when player is going left
+        if (this.velocity.x < -0) {}
+      }
     }
   }
 }
