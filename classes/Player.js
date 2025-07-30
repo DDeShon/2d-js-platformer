@@ -213,5 +213,7 @@ class Player {
     }
   }
 
-  checkForVerticalCollisions(collisionBlocks){}
+  checkForVerticalCollisions(collisionBlocks){
+    const buffer = 0.0001;
+  }
 }
