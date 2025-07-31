@@ -193,10 +193,10 @@ class Player {
 
       // Check if a collision exists on all axes
       if (
-        this.x <= collisionBlock.x + collisionBlock.width &&
-        this.x + this.width >= collisionBlock.x &&
-        this.y + this.height >= collisionBlock.y &&
-        this.y <= collisionBlock.y + collisionBlock.height
+        this.hitbox.x <= collisionBlock.x + collisionBlock.width &&
+        this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
+        this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
+        this.hitbox.y <= collisionBlock.y + collisionBlock.height
       ) {
         // Check collision when player is going left
         if (this.velocity.x < -0) {
