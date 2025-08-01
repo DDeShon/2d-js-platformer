@@ -192,6 +192,10 @@ class Player {
 
   handleInput(keys) {
     this.velocity.x = 0;
+
+    if (keys.d.pressed) {
+      this.velocity.x = X_VELOCITY;
+    }
   }
 
   checkForHorizontalCollisions(collisionBlocks) {
