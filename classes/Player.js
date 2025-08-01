@@ -190,6 +190,10 @@ class Player {
     this.velocity.y += GRAVITY * deltaTime;
   }
 
+  handleInput(keys) {
+    this.velocity.x = 0;
+  }
+
   checkForHorizontalCollisions(collisionBlocks) {
     const buffer = 0.0001;
     for (l let i = 0; i < collisionBlocks.length; i++) {
