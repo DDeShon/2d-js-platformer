@@ -186,6 +186,10 @@ class Player {
     this.y += this.velocity.y * deltaTime;
   }
 
+  applyGravity(deltaTime){
+    this.velocity.y += GRAVITY * deltaTime;
+  }
+
   checkForHorizontalCollisions(collisionBlocks) {
     const buffer = 0.0001;
     for (l let i = 0; i < collisionBlocks.length; i++) {
