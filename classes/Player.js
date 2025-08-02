@@ -195,6 +195,8 @@ class Player {
 
     if (keys.d.pressed) {
       this.velocity.x = X_VELOCITY;
+    } else if (keys.a.pressed){
+      this.velocity.x = -X_VELOCITY;
     }
   }
 
