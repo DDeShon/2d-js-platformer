@@ -232,5 +232,8 @@ class Player {
 
   checkForVerticalCollisions(collisionBlocks){
     const buffer = 0.0001;
+    for (let i = 0; i < collisionBlocks.length; i++) {
+      const collisionBlock = collisionBlocks[i];
+    }
   }
 }
