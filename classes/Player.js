@@ -184,6 +184,7 @@ class Player {
 
   updateverticalPosition(deltaTime) {
     this.y += this.velocity.y * deltaTime;
+    this.hitbox.y += this.velocity.y * deltaTime;
   }
 
   applyGravity(deltaTime){
