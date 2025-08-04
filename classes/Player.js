@@ -206,7 +206,7 @@ class Player {
     for (l let i = 0; i < collisionBlocks.length; i++) {
       const collisionBlock = collisionBlocks[i];
 
-      // Check if a collision exists on all axes
+      // Check for collision on all axes
       if (
         this.hitbox.x <= collisionBlock.x + collisionBlock.width &&
         this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
@@ -234,6 +234,14 @@ class Player {
     const buffer = 0.0001;
     for (let i = 0; i < collisionBlocks.length; i++) {
       const collisionBlock = collisionBlocks[i];
+
+      // Check for collision on all axes
+      if (
+        this.hitbox.x <= collisionBlock.x + collisionBlock.width &&
+        this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
+        this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
+        this.hitbox.y <= collisionBlock.y + collisionBlock.height
+      )
     }
   }
 }
