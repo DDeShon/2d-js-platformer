@@ -213,14 +213,14 @@ class Player {
         this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
         this.hitbox.y <= collisionBlock.y + collisionBlock.height
       ) {
-        // Check collision when player is going left
+        // Check for collision when player is going left
         if (this.velocity.x < -0) {
           this.hitbox.x = collisionBlock.x + collisionBlock.width + buffer;
           this.x = this.hitbox.x;
           break;
         }
 
-        // Check collision when player is going right
+        // Check for collision when player is going right
         if (this.velocity > 0) {
           this.hitbox.x = collisionBlock.x - this.width - buffer;
           this.x = this.hitbox.x;
@@ -241,7 +241,13 @@ class Player {
         this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
         this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
         this.hitbox.y <= collisionBlock.y + collisionBlock.height
-      )
+      ){
+        // Check for collision when player is going up
+        if (this.velocity.y < 0) {
+          this.velocity.y = 0;
+          this.collisionBlock.y + collisionBlock.height + buffer;
+          break;
+        }
     }
   }
 }
