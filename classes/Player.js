@@ -252,7 +252,9 @@ class Player {
         // Check for collision when player is going down
         if (this.velocity.y > 0) {
           this.velocity.y = 0;
-          
+          this.y = collisionBlock.y - this.height - buffer;
+          this.isOnGround = true;
+          break;
         }
     }
   }
