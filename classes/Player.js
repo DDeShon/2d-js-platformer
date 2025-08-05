@@ -248,6 +248,12 @@ class Player {
           this.collisionBlock.y + collisionBlock.height + buffer;
           break;
         }
+
+        // Check for collision when player is going down
+        if (this.velocity.y > 0) {
+          this.velocity.y = 0;
+          
+        }
     }
   }
 }
