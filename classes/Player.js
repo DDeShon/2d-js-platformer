@@ -245,7 +245,7 @@ class Player {
         // Check for collision when player is going up
         if (this.velocity.y < 0) {
           this.velocity.y = 0;
-          this.collisionBlock.y + collisionBlock.height + buffer;
+          this.hitbox.y = collisionBlock.y + collisionBlock.height + buffer;
           break;
         }
 
