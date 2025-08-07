@@ -223,7 +223,7 @@ class Player {
         // Check for collision when player is going right
         if (this.velocity > 0) {
           this.hitbox.x = collisionBlock.x - this.width - buffer;
-          this.x = this.hitbox.x;
+          this.x = this.hitbox.x - 4;
           break;
         }
       }
