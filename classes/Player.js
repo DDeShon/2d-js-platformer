@@ -254,7 +254,7 @@ class Player {
         if (this.velocity.y > 0) {
           this.velocity.y = 0;
           this.y = collisionBlock.y - this.height - buffer;
-          this.hitbox.y = collisionBlock.y - this.height - buffer;
+          this.hitbox.y = collisionBlock.y - this.hitbox.height - buffer;
           this.isOnGround = true;
           break;
         }
