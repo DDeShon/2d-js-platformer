@@ -246,7 +246,7 @@ class Player {
         if (this.velocity.y < 0) {
           this.velocity.y = 0;
           this.hitbox.y = collisionBlock.y + collisionBlock.height + buffer;
-          this.y = this.hitbox.y;
+          this.y = this.hitbox.y - 9;
           break;
         }
 
