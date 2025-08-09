@@ -1,6 +1,6 @@
 const OPOSSUM_X_VELOCITY = 200;
-const JUMP_POWER = 250;
-const GRAVITY = 500;
+const OPOSSUM_JUMP_POWER = 250;
+const OPOSSUM_GRAVITY = 500;
 
 class Opossum {
   constructor({ x, y, size, velocity = { x: 0, y: 0 } }) {
@@ -188,7 +188,7 @@ class Opossum {
   }
 
   applyGravity(deltaTime){
-    this.velocity.y += GRAVITY * deltaTime;
+    this.velocity.y += OPOSSUM_GRAVITY * deltaTime;
   }
 
   handleInput(keys) {
