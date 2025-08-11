@@ -125,6 +125,13 @@ const player = new Player({
   velocity: { x: 0, y: 0 },
 });
 
+const Opossum = new Opossum({
+  x: 100,
+  y: 100,
+  size: 16,
+  velocity: { x: 0, y: 0 },
+});
+
 const keys = {
   w: {
     pressed: false,
