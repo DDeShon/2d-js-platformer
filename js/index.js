@@ -166,6 +166,9 @@ function animate(backgroundCanvas) {
   player.handleInput(keys);
   player.update(deltaTime, collisionBlocks);
 
+  // Update opossum position
+  opossum.update(deltaTime, collisionBlocks);
+
   // Track scroll post distance
   if (player.x > SCROLL_POST_RIGHT) {
     const scrollPostDistance = player.x - SCROLL_POST_RIGHT;
