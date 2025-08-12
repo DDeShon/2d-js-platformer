@@ -194,6 +194,7 @@ function animate(backgroundCanvas) {
   c.drawImage(brambleBackgroundCanvas, camera.x * 0.16, 0);
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
+  opossum.draw(c);
 
   // This block will show scroll posts for debugging purposes
   // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
