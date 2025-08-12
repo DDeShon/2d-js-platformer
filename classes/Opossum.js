@@ -19,33 +19,12 @@ class Opossum {
     this.elapsedTime = 0;
     this.currentFrame = 0;
     this.sprites = {
-      idle: {
-        x: 0,
-        y: 0,
-        width: 33,
-        height: 32,
-        frames: 4,
-      },
       run: {
         x: 0,
         y: 32,
         width: 33,
         height: 32,
         frames: 6,
-      },
-      jump: {
-        x: 0,
-        y: 32 * 5,
-        width: 33,
-        height: 32,
-        frames: 1,
-      },
-      fall: {
-        x: 33,
-        y: 32 * 5,
-        width: 33,
-        height: 32,
-        frames: 1,
       },
     };
     this.currentSprite = this.sprites.idle;
