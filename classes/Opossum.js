@@ -21,13 +21,13 @@ class Opossum {
     this.sprites = {
       run: {
         x: 0,
-        y: 32,
+        y: 0,
         width: 33,
         height: 32,
         frames: 6,
       },
     };
-    this.currentSprite = this.sprites.idle;
+    this.currentSprite = this.sprites.run;
     this.facing = "right";
     this.hitbox = {
       x: 0,
