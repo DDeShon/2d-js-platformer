@@ -15,7 +15,7 @@ class Opossum {
     this.image.onload = () => {
       this.isImageLoaded = true;
     };
-    this.image.src = "./images/player.png";
+    this.image.src = "./images/opossum.png";
     this.elapsedTime = 0;
     this.currentFrame = 0;
     this.sprites = {
