@@ -104,7 +104,6 @@ class Opossum {
     this.checkForVerticalCollisions(collisionBlocks);
 
     this.determineDirection();
-    this.switchSprites();
   }
 
   determineDirection() {
