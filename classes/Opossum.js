@@ -115,42 +115,6 @@ class Opossum {
     }
   }
 
-  switchSprites() {
-    if (
-      this.isOnGround &&
-      this.velocity.x === 0 &&
-      this.currentSprite !== this.sprites.idle
-    ) {
-      // Idle
-      this.currentFrame = 0;
-      this.currentSprite = this.sprites.idle;
-    } else if (
-      this.isOnGround &&
-      this.velocity.x !== 0 &&
-      this.currentSprite !== this.sprites.run
-    ) {
-      // Run
-      this.currentFrame = 0;
-      this.currentSprite = this.sprites.run;
-    } else if (
-      !this.isOnGround &&
-      this.velocity.y < 0 &&
-      this.currentSprite !== this.sprites.jump
-    ) {
-      // Jump
-      this.currentFrame = 0;
-      this.currentSprite = this.sprites.jump;
-    } else if (
-      !this.isOnGround &&
-      this.velocity.y > 0 &&
-      this.currentSprite !== this.sprites.fall
-    ) {
-      // Fall
-      this.currentFrame = 0;
-      this.currentSprite = this.sprites.fall;
-    }
-  }
-
   jump() {
     this.velocity.y = -JUMP_POWER;
     this.isOnGround = false;
