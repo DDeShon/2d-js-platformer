@@ -22,7 +22,7 @@ class Opossum {
       run: {
         x: 0,
         y: 0,
-        width: 33,
+        width: 36,
         height: 32,
         frames: 6,
       },
