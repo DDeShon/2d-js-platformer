@@ -23,7 +23,7 @@ class Opossum {
         x: 0,
         y: 0,
         width: 36,
-        height: 32,
+        height: 28,
         frames: 6,
       },
     };
