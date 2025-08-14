@@ -32,7 +32,7 @@ class Opossum {
     this.hitbox = {
       x: 0,
       y: 0,
-      width: 20,
+      width: 30,
       height: 23
     }
   }
