@@ -87,7 +87,7 @@ class Opossum {
     }
 
     // Update hitbox position
-    this.hitbox.x = this.x + 4;
+    this.hitbox.x = this.x;
     this.hitbox.y = this.y + 9;
 
     this.applyGravity(deltaTime);
