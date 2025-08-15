@@ -1,9 +1,9 @@
-const OPOSSUM_X_VELOCITY = 200;
+const OPOSSUM_X_VELOCITY = -20;
 const OPOSSUM_JUMP_POWER = 250;
 const OPOSSUM_GRAVITY = 500;
 
 class Opossum {
-  constructor({ x, y, size, velocity = { x: 0, y: 0 } }) {
+  constructor({ x, y, size, velocity = { x: -OPOSSUM_X_VELOCITY, y: 0 } }) {
     this.x = x;
     this.y = y;
     this.width = size;
