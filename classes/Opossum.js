@@ -50,7 +50,7 @@ class Opossum {
       let xScale = 1;
       let x = this.x;
 
-      if (this.facing === "left") {
+      if (this.facing === "right") {
         xScale = -1;
         x = -this.x - this.width;
       }
