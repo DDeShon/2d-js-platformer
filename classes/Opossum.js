@@ -121,6 +121,11 @@ class Opossum {
   }
 
   updateHorizontalPosition(deltaTime) {
+    if (Math.abs(this.distanceTraveled) > 100) {
+        this.velocity.x = -this.velocity.x;
+        this.distanceTraveled = 0;
+    }
+
     this.x += this.velocity.x * deltaTime;
     this.hitbox.x += this.velocity.x * deltaTime;
     this.distanceTraveled += this.velocity.x + deltaTime;
