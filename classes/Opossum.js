@@ -35,6 +35,7 @@ class Opossum {
       width: 30,
       height: 23
     }
+    this.distanceTraveled = 0;
   }
 
   draw(c) {
