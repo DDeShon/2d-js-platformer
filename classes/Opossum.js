@@ -123,6 +123,7 @@ class Opossum {
   updateHorizontalPosition(deltaTime) {
     this.x += this.velocity.x * deltaTime;
     this.hitbox.x += this.velocity.x * deltaTime;
+    this.distanceTraveled += this.velocity.x + deltaTime;
   }
 
   updateverticalPosition(deltaTime) {
