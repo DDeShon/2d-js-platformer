@@ -121,7 +121,7 @@ class Opossum {
   }
 
   updateHorizontalPosition(deltaTime) {
-    if (Math.abs(this.distanceTraveled) > 100) {
+    if (Math.abs(this.distanceTraveled) > this.turningDistance) {
         this.velocity.x = -this.velocity.x;
         this.distanceTraveled = 0;
     }
