@@ -3,7 +3,7 @@ const OPOSSUM_JUMP_POWER = 250;
 const OPOSSUM_GRAVITY = 500;
 
 class Opossum {
-  constructor({ x, y, size, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } }) {
+  constructor({ x, y, size, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } }, turningDistance = 100) {
     this.x = x;
     this.y = y;
     this.width = size;
