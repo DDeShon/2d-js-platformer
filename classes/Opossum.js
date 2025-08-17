@@ -36,7 +36,7 @@ class Opossum {
       height: 23
     }
     this.distanceTraveled = 0;
-    this.turningDistance = 100;
+    this.turningDistance = turningDistance;
   }
 
   draw(c) {
