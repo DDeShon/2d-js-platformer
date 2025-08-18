@@ -126,7 +126,7 @@ const player = new Player({
 });
 
 const Opossum = new Opossum({
-  x: 550,
+  x: 650,
   y: 100,
   size: 32,
 });
