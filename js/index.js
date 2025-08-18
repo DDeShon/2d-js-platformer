@@ -121,15 +121,14 @@ const renderStaticLayers = async (layersData) => {
 const player = new Player({
   x: 100,
   y: 100,
-  size: 16,
+  size: 32,
   velocity: { x: 0, y: 0 },
 });
 
 const Opossum = new Opossum({
   x: 550,
   y: 100,
-  size: 16,
-  velocity: { x: 0, y: 0 },
+  size: 32,
 });
 
 const keys = {
