@@ -3,7 +3,10 @@ const OPOSSUM_JUMP_POWER = 250;
 const OPOSSUM_GRAVITY = 500;
 
 class Opossum {
-  constructor({ x, y, size, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } }, turningDistance = 100) {
+  constructor(
+    { x, y, size, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } },
+    turningDistance = 100
+  ) {
     this.x = x;
     this.y = y;
     this.width = size;
@@ -33,8 +36,8 @@ class Opossum {
       x: 0,
       y: 0,
       width: 30,
-      height: 23
-    }
+      height: 23,
+    };
     this.distanceTraveled = 0;
     this.turningDistance = turningDistance;
   }
@@ -123,8 +126,8 @@ class Opossum {
 
   updateHorizontalPosition(deltaTime) {
     if (Math.abs(this.distanceTraveled) > this.turningDistance) {
-        this.velocity.x = -this.velocity.x;
-        this.distanceTraveled = 0;
+      this.velocity.x = -this.velocity.x;
+      this.distanceTraveled = 0;
     }
 
     this.x += this.velocity.x * deltaTime;
@@ -137,7 +140,7 @@ class Opossum {
     this.hitbox.y += this.velocity.y * deltaTime;
   }
 
-  applyGravity(deltaTime){
+  applyGravity(deltaTime) {
     this.velocity.y += OPOSSUM_GRAVITY * deltaTime;
   }
 
@@ -146,7 +149,7 @@ class Opossum {
 
     if (keys.d.pressed) {
       this.velocity.x = OPOSSUM_X_VELOCITY;
-    } else if (keys.a.pressed){
+    } else if (keys.a.pressed) {
       this.velocity.x = -OPOSSUM_X_VELOCITY;
     }
   }
@@ -180,7 +183,7 @@ class Opossum {
     }
   }
 
-  checkForVerticalCollisions(collisionBlocks){
+  checkForVerticalCollisions(collisionBlocks) {
     const buffer = 0.0001;
     for (let i = 0; i < collisionBlocks.length; i++) {
       const collisionBlock = collisionBlocks[i];
@@ -191,7 +194,7 @@ class Opossum {
         this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
         this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
         this.hitbox.y <= collisionBlock.y + collisionBlock.height
-      ){
+      ) {
         // Check for collision when player is going up
         if (this.velocity.y < 0) {
           this.velocity.y = 0;
@@ -208,6 +211,7 @@ class Opossum {
           this.isOnGround = true;
           break;
         }
+      }
     }
   }
 }
