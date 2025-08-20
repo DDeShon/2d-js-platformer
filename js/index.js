@@ -7,14 +7,13 @@ canvas.height = 576 * dpr;
 
 const oceanLayerData = {
   l_New_Layer_1: l_New_Layer_1,
-}
+};
 
 const brambleLayerData = {
   l_New_Layer_2: l_New_Layer_2,
-}
+};
 
 const layersData = {
-  
   l_New_Layer_8: l_New_Layer_8,
   // l_New_Layer_3: l_New_Layer_3,
   l_Decorations: l_Decorations,
@@ -167,6 +166,10 @@ function animate(backgroundCanvas) {
 
   // Update opossum position
   opossum.update(deltaTime, collisionBlocks);
+
+  if (checkCollisions(player, opossum)) {
+    console.log("colliding");
+  }
 
   // Track scroll post distance
   if (player.x > SCROLL_POST_RIGHT) {
