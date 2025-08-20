@@ -153,7 +153,7 @@ class Opossum {
 
   checkForHorizontalCollisions(collisionBlocks) {
     const buffer = 0.0001;
-    for (l let i = 0; i < collisionBlocks.length; i++) {
+    for (let i = 0; i < collisionBlocks.length; i++) {
       const collisionBlock = collisionBlocks[i];
 
       // Check for collision on all axes
