@@ -168,7 +168,7 @@ function animate(backgroundCanvas) {
   opossum.update(deltaTime, collisionBlocks);
 
   if (checkCollisions(player, opossum)) {
-    console.log("colliding");
+    player.velocity.y = -200;
   }
 
   // Track scroll post distance
