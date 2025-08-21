@@ -9,9 +9,9 @@ const loadImage = (src) => {
 
 function checkCollisions(object1, object2) {
   return (
-    object1.hitbox.x + object1.width >= object2.x &&
-    object1.hitbox.x <= object2.x + object2.width &&
-    object1.hitbox.y <= object2.y + object2.height &&
-    object1.hitbox.y + object1.height >= object2.y
+    object1.hitbox.x + object1.hitbox.width >= object2.x &&
+    object1.hitbox.x <= object2.hitbox.x + object2.width &&
+    object1.hitbox.y <= object2.hitbox.y + object2.height &&
+    object1.hitbox.y + object1.hitbox.height >= object2.y
   );
 }
