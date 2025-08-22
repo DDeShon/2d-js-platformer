@@ -1,8 +1,5 @@
 class Sprite {
-  constructor(
-    { x, y, size, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } },
-    turningDistance = 100
-  ) {
+  constructor({ x, y, size }) {
     this.x = x;
     this.y = y;
     this.width = size;
