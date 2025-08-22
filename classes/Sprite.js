@@ -1,8 +1,4 @@
-const OPOSSUM_X_VELOCITY = -20;
-const OPOSSUM_JUMP_POWER = 250;
-const OPOSSUM_GRAVITY = 500;
-
-class Opossum {
+class Sprite {
   constructor(
     { x, y, size, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } },
     turningDistance = 100
