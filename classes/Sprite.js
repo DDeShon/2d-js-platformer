@@ -70,12 +70,6 @@ class Sprite {
       this.elapsedTime -= secondsInterval;
     }
 
-    this.applyGravity(deltaTime);
-
-    // Update horizontal position and check collisions
-    this.updateHorizontalPosition(deltaTime);
-    this.checkForHorizontalCollisions(collisionBlocks);
-
     // Check for any platform collisions
     this.checkPlatformCollisions(platforms, deltaTime);
 
