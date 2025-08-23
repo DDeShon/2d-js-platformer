@@ -81,22 +81,6 @@ class Sprite {
     }
   }
 
-  jump() {
-    this.velocity.y = -JUMP_POWER;
-    this.isOnGround = false;
-  }
-
-  updateHorizontalPosition(deltaTime) {
-    if (Math.abs(this.distanceTraveled) > this.turningDistance) {
-      this.velocity.x = -this.velocity.x;
-      this.distanceTraveled = 0;
-    }
-
-    this.x += this.velocity.x * deltaTime;
-    this.hitbox.x += this.velocity.x * deltaTime;
-    this.distanceTraveled += this.velocity.x + deltaTime;
-  }
-
   updateverticalPosition(deltaTime) {
     this.y += this.velocity.y * deltaTime;
     this.hitbox.y += this.velocity.y * deltaTime;
