@@ -4,8 +4,6 @@ class Sprite {
     this.y = y;
     this.width = size;
     this.height = size;
-    this.velocity = velocity;
-    this.isOnGround = false;
     this.isImageLoaded = false;
     this.image = new Image();
     this.image.onload = () => {
@@ -25,14 +23,6 @@ class Sprite {
     };
     this.currentSprite = this.sprites.run;
     this.facing = "right";
-    this.hitbox = {
-      x: 0,
-      y: 0,
-      width: 30,
-      height: 23,
-    };
-    this.distanceTraveled = 0;
-    this.turningDistance = turningDistance;
   }
 
   draw(c) {
