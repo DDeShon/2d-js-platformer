@@ -81,16 +81,6 @@ class Sprite {
     }
   }
 
-  handleInput(keys) {
-    this.velocity.x = 0;
-
-    if (keys.d.pressed) {
-      this.velocity.x = OPOSSUM_X_VELOCITY;
-    } else if (keys.a.pressed) {
-      this.velocity.x = -OPOSSUM_X_VELOCITY;
-    }
-  }
-
   checkForHorizontalCollisions(collisionBlocks) {
     const buffer = 0.0001;
     for (let i = 0; i < collisionBlocks.length; i++) {
