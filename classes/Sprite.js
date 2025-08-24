@@ -81,35 +81,6 @@ class Sprite {
     }
   }
 
-  checkForHorizontalCollisions(collisionBlocks) {
-    const buffer = 0.0001;
-    for (let i = 0; i < collisionBlocks.length; i++) {
-      const collisionBlock = collisionBlocks[i];
-
-      // Check for collision on all axes
-      if (
-        this.hitbox.x <= collisionBlock.x + collisionBlock.width &&
-        this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
-        this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
-        this.hitbox.y <= collisionBlock.y + collisionBlock.height
-      ) {
-        // Check for collision when player is going left
-        if (this.velocity.x < -0) {
-          this.hitbox.x = collisionBlock.x + collisionBlock.width + buffer;
-          this.x = this.hitbox.x;
-          break;
-        }
-
-        // Check for collision when player is going right
-        if (this.velocity > 0) {
-          this.hitbox.x = collisionBlock.x - this.hitbox.width - buffer;
-          this.x = this.hitbox.x - 4;
-          break;
-        }
-      }
-    }
-  }
-
   checkForVerticalCollisions(collisionBlocks) {
     const buffer = 0.0001;
     for (let i = 0; i < collisionBlocks.length; i++) {
