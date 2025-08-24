@@ -81,15 +81,6 @@ class Sprite {
     }
   }
 
-  updateverticalPosition(deltaTime) {
-    this.y += this.velocity.y * deltaTime;
-    this.hitbox.y += this.velocity.y * deltaTime;
-  }
-
-  applyGravity(deltaTime) {
-    this.velocity.y += OPOSSUM_GRAVITY * deltaTime;
-  }
-
   handleInput(keys) {
     this.velocity.x = 0;
 
