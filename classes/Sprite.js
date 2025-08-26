@@ -1,9 +1,9 @@
 class Sprite {
-  constructor({ x, y, size }) {
+  constructor({ x, y, width, height }) {
     this.x = x;
     this.y = y;
-    this.width = size;
-    this.height = size;
+    this.width = width;
+    this.height = height;
     this.isImageLoaded = false;
     this.image = new Image();
     this.image.onload = () => {
