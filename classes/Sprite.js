@@ -80,36 +80,4 @@ class Sprite {
       this.facing = "left";
     }
   }
-
-  checkForVerticalCollisions(collisionBlocks) {
-    const buffer = 0.0001;
-    for (let i = 0; i < collisionBlocks.length; i++) {
-      const collisionBlock = collisionBlocks[i];
-
-      // Check for collision on all axes
-      if (
-        this.hitbox.x <= collisionBlock.x + collisionBlock.width &&
-        this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
-        this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
-        this.hitbox.y <= collisionBlock.y + collisionBlock.height
-      ) {
-        // Check for collision when player is going up
-        if (this.velocity.y < 0) {
-          this.velocity.y = 0;
-          this.hitbox.y = collisionBlock.y + collisionBlock.height + buffer;
-          this.y = this.hitbox.y - 9;
-          break;
-        }
-
-        // Check for collision when player is going down
-        if (this.velocity.y > 0) {
-          this.velocity.y = 0;
-          this.y = collisionBlock.y - this.height - buffer;
-          this.hitbox.y = collisionBlock.y - this.hitbox.height - buffer;
-          this.isOnGround = true;
-          break;
-        }
-      }
-    }
-  }
 }
