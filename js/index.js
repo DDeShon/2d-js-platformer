@@ -130,6 +130,8 @@ const opossum = new Opossum({
   size: 32,
 });
 
+const sprites = [new Sprite({})];
+
 const keys = {
   w: {
     pressed: false,
