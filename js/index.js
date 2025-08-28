@@ -130,7 +130,14 @@ const opossum = new Opossum({
   size: 32,
 });
 
-const sprites = [new Sprite({})];
+const sprites = [
+  new Sprite({
+    x: 300,
+    y: 100,
+    width: 32,
+    height: 32,
+  }),
+];
 
 const keys = {
   w: {
