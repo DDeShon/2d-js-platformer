@@ -59,7 +59,7 @@ class Sprite {
     }
   }
 
-  update(deltaTime, collisionBlocks) {
+  update(deltaTime) {
     if (!deltaTime) return;
 
     // Update animation frames
