@@ -176,6 +176,10 @@ function animate(backgroundCanvas) {
   // Update opossum position
   opossum.update(deltaTime, collisionBlocks);
 
+  sprites.forEach((sprite) => {
+    sprite.update();
+  });
+
   if (checkCollisions(player, opossum)) {
     player.velocity.y = -200;
   }
