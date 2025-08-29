@@ -178,7 +178,7 @@ function animate(backgroundCanvas) {
 
   for (let i = sprites.length - 1; i >= 0; i--) {
     const sprite = sprites[i];
-    sprite.update();
+    sprite.update(deltaTime);
   }
 
   if (checkCollisions(player, opossum)) {
