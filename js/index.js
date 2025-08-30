@@ -212,6 +212,11 @@ function animate(backgroundCanvas) {
   player.draw(c);
   opossum.draw(c);
 
+  for (let i = sprites.length - 1; i >= 0; i--) {
+    const sprite = sprites[i];
+    sprite.update(deltaTime);
+  }
+
   // This block will show scroll posts for debugging purposes
   // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
   // c.fillRect(300, SCROLL_POST_TOP, 100, 10);
