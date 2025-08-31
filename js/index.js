@@ -214,7 +214,7 @@ function animate(backgroundCanvas) {
 
   for (let i = sprites.length - 1; i >= 0; i--) {
     const sprite = sprites[i];
-    sprite.draw(deltaTime);
+    sprite.draw(c);
   }
 
   // This block will show scroll posts for debugging purposes
