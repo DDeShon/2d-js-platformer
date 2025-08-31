@@ -69,15 +69,5 @@ class Sprite {
       this.currentFrame = (this.currentFrame + 1) % this.currentSprite.frames;
       this.elapsedTime -= secondsInterval;
     }
-
-    this.determineDirection();
-  }
-
-  determineDirection() {
-    if (this.velocity.x > 0) {
-      this.facing = "right";
-    } else if (this.velocity.x < 0) {
-      this.facing = "left";
-    }
   }
 }
