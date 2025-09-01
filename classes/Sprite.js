@@ -22,7 +22,6 @@ class Sprite {
       },
     };
     this.currentSprite = this.sprites.run;
-    this.facing = "right";
   }
 
   draw(c) {
