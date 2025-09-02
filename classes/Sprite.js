@@ -1,5 +1,5 @@
 class Sprite {
-  constructor({ x, y, width, height }) {
+  constructor({ x, y, width, height, imageSrc }) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -9,7 +9,7 @@ class Sprite {
     this.image.onload = () => {
       this.isImageLoaded = true;
     };
-    this.image.src = "./images/opossum.png";
+    this.image.src = imageSrc;
     this.elapsedTime = 0;
     this.currentFrame = 0;
     this.sprites = {
