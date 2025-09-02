@@ -136,7 +136,6 @@ const sprites = [
     y: 100,
     width: 32,
     height: 32,
-    imageSrc: "./images/enemy-death.png",
   }),
 ];
 
