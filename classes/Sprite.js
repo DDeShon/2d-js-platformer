@@ -1,5 +1,5 @@
 class Sprite {
-  constructor({ x, y, width, height, imageSrc }) {
+  constructor({ x, y, width, height, imageSrc, spriteCropbox }) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -12,14 +12,7 @@ class Sprite {
     this.image.src = imageSrc;
     this.elapsedTime = 0;
     this.currentFrame = 0;
-    this.currentSprite = {
-      run: {
-        x: 0,
-        y: 0,
-        width: 36,
-        height: 28,
-        frames: 6,
-      },
+    this.currentSprite = spriteCropbox
     };
   }
 
