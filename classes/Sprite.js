@@ -1,5 +1,12 @@
 class Sprite {
-  constructor({ x, y, width, height, imageSrc, spriteCropbox }) {
+  constructor({ x, y, width, height, imageSrc, spriteCropbox = {
+    x: 0,
+    y: 0,
+    width: 36,
+    height: 28,
+    frames: 6
+  }  }
+  ) {
     this.x = x;
     this.y = y;
     this.width = width;
