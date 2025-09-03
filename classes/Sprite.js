@@ -12,7 +12,7 @@ class Sprite {
     this.image.src = imageSrc;
     this.elapsedTime = 0;
     this.currentFrame = 0;
-    this.sprites = {
+    this.currentSprite = {
       run: {
         x: 0,
         y: 0,
@@ -21,7 +21,6 @@ class Sprite {
         frames: 6,
       },
     };
-    this.currentSprite = this.sprites.run;
   }
 
   draw(c) {
