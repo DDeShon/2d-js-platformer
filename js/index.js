@@ -130,22 +130,7 @@ const opossum = new Opossum({
   size: 32,
 });
 
-const sprites = [
-  new Sprite({
-    x: 300,
-    y: 100,
-    width: 32,
-    height: 32,
-    imageSrc: "./images/enemy-death.png",
-    spriteCropbox: {
-      x: 0,
-      y: 0,
-      width: 40,
-      height: 41,
-      frames: 6,
-    },
-  }),
-];
+const sprites = [];
 
 const keys = {
   w: {
@@ -189,8 +174,25 @@ function animate(backgroundCanvas) {
     sprite.update(deltaTime);
   }
 
+  // When jumping on enemy
   if (checkCollisions(player, opossum)) {
     player.velocity.y = -200;
+    sprites.push(
+      new Sprite({
+        x: opossum.x,
+        y: opossum.y,
+        width: 32,
+        height: 32,
+        imageSrc: "./images/enemy-death.png",
+        spriteCropbox: {
+          x: 0,
+          y: 0,
+          width: 40,
+          height: 41,
+          frames: 6,
+        },
+      })
+    );
   }
 
   // Track scroll post distance
