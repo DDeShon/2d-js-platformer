@@ -137,7 +137,13 @@ const sprites = [
     width: 32,
     height: 32,
     imageSrc: "./images/enemy-death.png",
-    spriteCropbox: {},
+    spriteCropbox: {
+      x: 0,
+      y: 0,
+      width: 40,
+      height: 41,
+      frames: 6,
+    },
   }),
 ];
 
