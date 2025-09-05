@@ -172,6 +172,10 @@ function animate(backgroundCanvas) {
   for (let i = sprites.length - 1; i >= 0; i--) {
     const sprite = sprites[i];
     sprite.update(deltaTime);
+
+    if (sprite.iteration === 1) {
+      sprites.splice(i, 1);
+    }
   }
 
   // When jumping on enemy
