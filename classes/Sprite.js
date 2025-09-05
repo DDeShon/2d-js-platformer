@@ -67,6 +67,10 @@ class Sprite {
     if (this.elapsedTime > secondsInterval) {
       this.currentFrame = (this.currentFrame + 1) % this.currentSprite.frames;
       this.elapsedTime -= secondsInterval;
+
+      if (this.currentFrame === 0) {
+        this.iteration++;
+      }
     }
   }
 }
