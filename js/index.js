@@ -124,13 +124,13 @@ const player = new Player({
   velocity: { x: 0, y: 0 },
 });
 
-const opossum = new Opossum({
-  x: 650,
-  y: 100,
-  size: 32,
-});
-
-const opossums = [];
+const opossums = [
+  new Opossum({
+    x: 650,
+    y: 100,
+    size: 32,
+  }),
+];
 
 const sprites = [];
 
