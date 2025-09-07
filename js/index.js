@@ -171,7 +171,7 @@ function animate(backgroundCanvas) {
   // Update opossum position
   for (let i = opossums.length - 1; i >= 0; i--) {
     const opossum = opossums[i];
-    sprite.update(deltaTime);
+    opossum.update(deltaTime, collisionBlocks);
 
     if (sprite.iteration === 1) {
       opossums.splice(i, 1);
