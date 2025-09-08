@@ -172,6 +172,27 @@ function animate(backgroundCanvas) {
   for (let i = opossums.length - 1; i >= 0; i--) {
     const opossum = opossums[i];
     opossum.update(deltaTime, collisionBlocks);
+
+    // When jumping on enemy
+    if (checkCollisions(player, opossum)) {
+      player.velocity.y = -200;
+      sprites.push(
+        new Sprite({
+          x: opossum.x,
+          y: opossum.y,
+          width: 32,
+          height: 32,
+          imageSrc: "./images/enemy-death.png",
+          spriteCropbox: {
+            x: 0,
+            y: 0,
+            width: 40,
+            height: 41,
+            frames: 6,
+          },
+        })
+      );
+    }
   }
 
   for (let i = sprites.length - 1; i >= 0; i--) {
@@ -181,27 +202,6 @@ function animate(backgroundCanvas) {
     if (sprite.iteration === 1) {
       sprites.splice(i, 1);
     }
-  }
-
-  // When jumping on enemy
-  if (checkCollisions(player, opossum)) {
-    player.velocity.y = -200;
-    sprites.push(
-      new Sprite({
-        x: opossum.x,
-        y: opossum.y,
-        width: 32,
-        height: 32,
-        imageSrc: "./images/enemy-death.png",
-        spriteCropbox: {
-          x: 0,
-          y: 0,
-          width: 40,
-          height: 41,
-          frames: 6,
-        },
-      })
-    );
   }
 
   // Track scroll post distance
