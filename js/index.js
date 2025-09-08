@@ -229,7 +229,9 @@ function animate(backgroundCanvas) {
   c.drawImage(brambleBackgroundCanvas, camera.x * 0.16, 0);
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
-  opossum.draw(c);
+  for (let i = opossums.length - 1; i >= 0; i--) {
+    opossum.draw(c);
+  }
 
   for (let i = sprites.length - 1; i >= 0; i--) {
     const sprite = sprites[i];
