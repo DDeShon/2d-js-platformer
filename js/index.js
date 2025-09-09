@@ -130,6 +130,11 @@ const opossums = [
     y: 100,
     size: 32,
   }),
+  new Opossum({
+    x: 550,
+    y: 100,
+    size: 32,
+  }),
 ];
 
 const sprites = [];
