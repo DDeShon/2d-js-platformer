@@ -230,6 +230,7 @@ function animate(backgroundCanvas) {
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
   for (let i = opossums.length - 1; i >= 0; i--) {
+    const opossum = opossums[i];
     opossum.draw(c);
   }
 
