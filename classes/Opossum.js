@@ -9,8 +9,8 @@ class Opossum {
   ) {
     this.x = x;
     this.y = y;
-    this.width = size;
-    this.height = size;
+    this.width = width;
+    this.height = height;
     this.velocity = velocity;
     this.isOnGround = false;
     this.isImageLoaded = false;
