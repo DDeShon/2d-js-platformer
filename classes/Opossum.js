@@ -4,7 +4,7 @@ const OPOSSUM_GRAVITY = 500;
 
 class Opossum {
   constructor(
-    { x, y, size, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } },
+    { x, y, width, height, velocity = { x: OPOSSUM_X_VELOCITY, y: 0 } },
     turningDistance = 100
   ) {
     this.x = x;
