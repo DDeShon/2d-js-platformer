@@ -197,6 +197,8 @@ function animate(backgroundCanvas) {
           },
         })
       );
+
+      opossums.splice(i, 1);
     }
   }
 
