@@ -128,7 +128,8 @@ const opossums = [
   new Opossum({
     x: 650,
     y: 100,
-    size: 32,
+    width: 32,
+    height: 32,
   }),
   new Opossum({
     x: 550,
