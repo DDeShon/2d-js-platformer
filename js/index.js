@@ -129,13 +129,13 @@ const opossums = [
     x: 650,
     y: 100,
     width: 36,
-    height: 32,
+    height: 28,
   }),
   new Opossum({
     x: 550,
     y: 100,
     width: 36,
-    height: 32,
+    height: 28,
   }),
 ];
 
