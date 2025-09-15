@@ -13,4 +13,6 @@ function checkCollisions(object1, object2) {
     object1.hitbox.x <= object2.hitbox.x + object2.hitbox.width &&
     object1.hitbox.y <= object2.hitbox.y + object2.hitbox.height &&
     object1.hitbox.y + object1.hitbox.height >= object2.hitbox.y
+
+    if (!isColliding) return null;
 }
