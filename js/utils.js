@@ -15,4 +15,8 @@ function checkCollisions(object1, object2) {
     object1.hitbox.y + object1.hitbox.height >= object2.hitbox.y
 
     if (!isColliding) return null;
+
+    const xOverlap = Math.min(
+      object1.x + object1.width - object2.x;
+    )
 }
