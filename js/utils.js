@@ -21,5 +21,8 @@ function checkCollisions(object1, object2) {
       object2.x + object2.width - object1.x,
     )
 
-    const yOverlap = Math.min()
+    const yOverlap = Math.min(
+      object1.y + object1.height - object2.y,
+      
+    )
 }
