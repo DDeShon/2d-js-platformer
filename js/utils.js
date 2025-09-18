@@ -17,6 +17,7 @@ function checkCollisions(object1, object2) {
     if (!isColliding) return null;
 
     const xOverlap = Math.min(
-      object1.x + object1.width - object2.x;
+      object1.x + object1.width - object2.x,
+      object2.x + object2.width - object1.x,
     )
 }
