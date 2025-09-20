@@ -28,5 +28,7 @@ function checkCollisions(object1, object2) {
 
     if (xOverlap < yOverlap) {
       return object1.x < object2.x ? "right" : "left";
+    } else {
+      return object1.y < object2.y ? "bottom" : "top";
     }
 }
