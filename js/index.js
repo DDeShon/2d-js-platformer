@@ -202,25 +202,25 @@ function animate(backgroundCanvas) {
     const collisionDirection = checkCollisions(player, opossum)
     if (collisionDirection) {
       if (collisionDirection === 'bottom'){
-      player.velocity.y = -200;
-      sprites.push(
-        new Sprite({
-          x: opossum.x,
-          y: opossum.y,
-          width: 32,
-          height: 32,
-          imageSrc: "./images/enemy-death.png",
-          spriteCropbox: {
-            x: 0,
-            y: 0,
-            width: 40,
-            height: 41,
-            frames: 6,
-          },
-        })
-      );
+        player.velocity.y = -200;
+        sprites.push(
+          new Sprite({
+            x: opossum.x,
+            y: opossum.y,
+            width: 32,
+            height: 32,
+            imageSrc: "./images/enemy-death.png",
+            spriteCropbox: {
+              x: 0,
+              y: 0,
+              width: 40,
+              height: 41,
+              frames: 6,
+            },
+          })
+        );
 
-      opossums.splice(i, 1);
+        opossums.splice(i, 1);
       }
     }
   }
