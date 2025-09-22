@@ -56,6 +56,7 @@ class Player {
       width: 20,
       height: 23
     }
+    this.isInvincible = false;
   }
 
   draw(c) {
