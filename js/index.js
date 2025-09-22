@@ -201,7 +201,7 @@ function animate(backgroundCanvas) {
     // When jumping on enemy
     const collisionDirection = checkCollisions(player, opossum)
     if (collisionDirection) {
-      if (collisionDirection === 'bottom'){
+      if (collisionDirection === 'bottom' && !player.isOnGround){
         player.velocity.y = -200;
         sprites.push(
           new Sprite({
