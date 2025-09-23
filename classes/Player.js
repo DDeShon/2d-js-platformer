@@ -78,6 +78,7 @@ class Player {
       }
 
       c.save();
+      c.globalAlpha = 1;
 
       c.scale(xScale, 1);
 
