@@ -80,6 +80,8 @@ class Player {
       c.save();
       if (this.isInvincible) {
         c.globalAlpha = 0.5;
+      } else {
+        c.globalAlpha = 1;
       }
 
       c.scale(xScale, 1);
