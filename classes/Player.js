@@ -59,6 +59,10 @@ class Player {
     this.isInvincible = false;
   }
 
+  setIsInvincible() {
+    this.isInvincible = true;
+  }
+
   draw(c) {
     // Red square debug code
     // c.fillStyle = "rgba(255, 0, 0, 0.5)";
