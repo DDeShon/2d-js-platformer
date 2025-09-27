@@ -61,6 +61,9 @@ class Player {
 
   setIsInvincible() {
     this.isInvincible = true;
+    setTimeout(() =>{
+      
+    })
   }
 
   draw(c) {
