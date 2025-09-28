@@ -63,7 +63,7 @@ class Player {
     this.isInvincible = true;
     setTimeout(() =>{
       this.isInvincible = false;
-    })
+    }, 1500)
   }
 
   draw(c) {
