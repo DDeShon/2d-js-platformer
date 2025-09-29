@@ -54,14 +54,14 @@ class Player {
       x: 0,
       y: 0,
       width: 20,
-      height: 23
-    }
+      height: 23,
+    };
     this.isInvincible = false;
   }
 
   setIsInvincible() {
     this.isInvincible = true;
-    setTimeout(() =>{
+    setTimeout(() => {
       this.isInvincible = false;
     }, 1500);
   }
@@ -200,7 +200,7 @@ class Player {
     this.hitbox.y += this.velocity.y * deltaTime;
   }
 
-  applyGravity(deltaTime){
+  applyGravity(deltaTime) {
     this.velocity.y += GRAVITY * deltaTime;
   }
 
@@ -209,14 +209,14 @@ class Player {
 
     if (keys.d.pressed) {
       this.velocity.x = X_VELOCITY;
-    } else if (keys.a.pressed){
+    } else if (keys.a.pressed) {
       this.velocity.x = -X_VELOCITY;
     }
   }
 
   checkForHorizontalCollisions(collisionBlocks) {
     const buffer = 0.0001;
-    for (l let i = 0; i < collisionBlocks.length; i++) {
+    for (let i = 0; i < collisionBlocks.length; i++) {
       const collisionBlock = collisionBlocks[i];
 
       // Check for collision on all axes
@@ -243,7 +243,7 @@ class Player {
     }
   }
 
-  checkForVerticalCollisions(collisionBlocks){
+  checkForVerticalCollisions(collisionBlocks) {
     const buffer = 0.0001;
     for (let i = 0; i < collisionBlocks.length; i++) {
       const collisionBlock = collisionBlocks[i];
@@ -254,7 +254,7 @@ class Player {
         this.hitbox.x + this.hitbox.width >= collisionBlock.x &&
         this.hitbox.y + this.hitbox.height >= collisionBlock.y &&
         this.hitbox.y <= collisionBlock.y + collisionBlock.height
-      ){
+      ) {
         // Check for collision when player is going up
         if (this.velocity.y < 0) {
           this.velocity.y = 0;
@@ -271,6 +271,7 @@ class Player {
           this.isOnGround = true;
           break;
         }
+      }
     }
   }
 }
