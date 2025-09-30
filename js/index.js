@@ -225,6 +225,7 @@ function animate(backgroundCanvas) {
         collisionDirection === "left" ||
         collisionDirection === "right"
       ) {
+        player.setIsInvincible();
       }
     }
   }
