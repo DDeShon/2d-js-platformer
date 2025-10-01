@@ -23,10 +23,8 @@ class Heart {
       this.isImageLoaded = true;
     };
     this.image.src = imageSrc;
-    this.elapsedTime = 0;
     this.currentFrame = 0;
     this.currentSprite = spriteCropbox;
-    this.iteration = 0;
   }
 
   draw(c) {
