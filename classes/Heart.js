@@ -57,20 +57,4 @@ class Heart {
       c.restore();
     }
   }
-
-  update(deltaTime) {
-    if (!deltaTime) return;
-
-    // Update animation frames
-    this.elapsedTime += deltaTime;
-    const secondsInterval = 0.1;
-    if (this.elapsedTime > secondsInterval) {
-      this.currentFrame = (this.currentFrame + 1) % this.currentSprite.frames;
-      this.elapsedTime -= secondsInterval;
-
-      if (this.currentFrame === 0) {
-        this.iteration++;
-      }
-    }
-  }
 }
