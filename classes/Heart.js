@@ -1,4 +1,4 @@
-class Sprite {
+class Heart {
   constructor({
     x,
     y,
