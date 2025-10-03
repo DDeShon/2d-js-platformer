@@ -158,6 +158,7 @@ const opossums = [
 ];
 
 const sprites = [];
+const hearts = [];
 
 const keys = {
   w: {
