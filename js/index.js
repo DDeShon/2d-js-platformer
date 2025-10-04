@@ -160,18 +160,18 @@ const opossums = [
 const sprites = [];
 const hearts = [
   new Heart({
-    x,
-    y,
-    width,
-    height,
-    imageSrc,
-    spriteCropbox = {
+    x: 10,
+    y: 10,
+    width: 32,
+    height: 32,
+    imageSrc: "/images/enemy-death.png",
+    spriteCropbox: {
       x: 0,
       y: 0,
       width: 36,
       height: 28,
-      frames: 6
-    }
+      frames: 6,
+    },
   }),
 ];
 
