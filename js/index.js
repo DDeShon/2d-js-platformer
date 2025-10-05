@@ -169,7 +169,7 @@ const hearts = [
       x: 0,
       y: 0,
       width: 36,
-      height: 28,
+      height: 24,
       frames: 6,
     },
   }),
