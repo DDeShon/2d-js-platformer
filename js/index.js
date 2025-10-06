@@ -291,8 +291,8 @@ function animate(backgroundCanvas) {
   }
 
   for (let i = hearts.length - 1; i >= 0; i--) {
-    const sprite = hearts[i];
-    sprite.draw(c);
+    const heart = hearts[i];
+    heart.draw(c);
   }
 
   // This block will show scroll posts for debugging purposes
