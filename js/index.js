@@ -164,7 +164,7 @@ const hearts = [
     y: 10,
     width: 32,
     height: 32,
-    imageSrc: "/images/enemy-death.png",
+    imageSrc: "/images/hearts.png",
     spriteCropbox: {
       x: 0,
       y: 0,
