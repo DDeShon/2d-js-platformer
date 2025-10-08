@@ -162,13 +162,13 @@ const hearts = [
   new Heart({
     x: 10,
     y: 10,
-    width: 32,
+    width: 21,
     height: 18,
     imageSrc: "/images/hearts.png",
     spriteCropbox: {
       x: 0,
       y: 0,
-      width: 36,
+      width: 21,
       height: 18,
       frames: 6,
     },
