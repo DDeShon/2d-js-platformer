@@ -187,6 +187,20 @@ const hearts = [
       frames: 6,
     },
   }),
+  new Heart({
+    x: 10,
+    y: 10,
+    width: 21,
+    height: 18,
+    imageSrc: "/images/hearts.png",
+    spriteCropbox: {
+      x: 0,
+      y: 0,
+      width: 21,
+      height: 18,
+      frames: 6,
+    },
+  }),
 ];
 
 const keys = {
