@@ -174,7 +174,7 @@ const hearts = [
     },
   }),
   new Heart({
-    x: 10,
+    x: 56,
     y: 10,
     width: 21,
     height: 18,
