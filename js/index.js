@@ -160,7 +160,7 @@ const opossums = [
 const sprites = [];
 const hearts = [
   new Heart({
-    x: 10,
+    x: 33,
     y: 10,
     width: 21,
     height: 18,
