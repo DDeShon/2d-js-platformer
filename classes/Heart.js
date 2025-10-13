@@ -37,6 +37,10 @@ class Heart {
       let xScale = 1;
       let x = this.x;
 
+      if (this.depleted) {
+        this.currentFrame = 1;
+      }
+
       c.save();
 
       c.scale(xScale, 1);
