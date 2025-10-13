@@ -25,7 +25,7 @@ class Heart {
     this.image.src = imageSrc;
     this.currentFrame = 0;
     this.currentSprite = spriteCropbox;
-    this.depleted = false;
+    this.depleted = true;
   }
 
   draw(c) {
