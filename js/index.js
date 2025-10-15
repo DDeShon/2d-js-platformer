@@ -269,6 +269,9 @@ function animate(backgroundCanvas) {
         collisionDirection === "left" ||
         collisionDirection === "right"
       ) {
+        const fullHearts = hearts.filter((heart) => {
+          return !heart.depleted;
+        });
         player.setIsInvincible();
       }
     }
