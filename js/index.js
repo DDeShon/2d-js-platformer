@@ -272,6 +272,7 @@ function animate(backgroundCanvas) {
         const fullHearts = hearts.filter((heart) => {
           return !heart.depleted;
         });
+        fullHearts[fullHearts.length - 1].depleted = false;
         player.setIsInvincible();
       }
     }
