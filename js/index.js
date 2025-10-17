@@ -274,7 +274,7 @@ function animate(backgroundCanvas) {
         });
 
         if(!player.isInvincible && fullHearts.length > 0){
-          fullHearts[fullHearts.length - 1].depleted = false;
+          fullHearts[fullHearts.length - 1].depleted = true;
         }
         player.setIsInvincible();
       }
