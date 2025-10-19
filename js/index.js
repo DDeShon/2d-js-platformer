@@ -325,16 +325,18 @@ function animate(backgroundCanvas) {
     sprite.draw(c);
   }
 
-  for (let i = hearts.length - 1; i >= 0; i--) {
-    const heart = hearts[i];
-    heart.draw(c);
-  }
+  
 
   // This block will show scroll posts for debugging purposes
   // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
   // c.fillRect(300, SCROLL_POST_TOP, 100, 10);
   // c.fillRect(300, SCROLL_POST_BOTTOM, 100, 10);
   c.restore();
+
+  for (let i = hearts.length - 1; i >= 0; i--) {
+    const heart = hearts[i];
+    heart.draw(c);
+  }
 
   requestAnimationFrame(() => animate(backgroundCanvas));
 }
