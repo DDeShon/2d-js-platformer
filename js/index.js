@@ -117,14 +117,14 @@ const renderStaticLayers = async (layersData) => {
 // END of Tile Setup
 
 // Change XY coordinates to move player's position
-const player = new Player({
+let player = new Player({
   x: 100,
   y: 100,
   size: 32,
   velocity: { x: 0, y: 0 },
 });
 
-const opossums = [
+let opossums = [
   new Opossum({
     x: 650,
     y: 100,
@@ -228,7 +228,7 @@ let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 
 function init(){
-  
+
 }
 
 function animate(backgroundCanvas) {
