@@ -333,10 +333,13 @@ function animate(backgroundCanvas) {
   // c.fillRect(300, SCROLL_POST_BOTTOM, 100, 10);
   c.restore();
 
+  c.save();
+  c.scale(dpr + 1, dpr + 1);
   for (let i = hearts.length - 1; i >= 0; i--) {
     const heart = hearts[i];
     heart.draw(c);
   }
+  c.restore();
 
   requestAnimationFrame(() => animate(backgroundCanvas));
 }
