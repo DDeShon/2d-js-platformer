@@ -227,6 +227,10 @@ const SCROLL_POST_BOTTOM = 200;
 let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 
+function init(){
+  
+}
+
 function animate(backgroundCanvas) {
   // Calculate delta time
   const currentTime = performance.now();
