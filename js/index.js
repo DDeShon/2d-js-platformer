@@ -157,8 +157,8 @@ let opossums = [
   }),
 ];
 
-const sprites = [];
-const hearts = [
+let sprites = [];
+let hearts = [
   new Heart({
     x: 33,
     y: 10,
