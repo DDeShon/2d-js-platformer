@@ -216,7 +216,7 @@ const keys = {
 };
 
 let lastTime = performance.now();
-const camera = {
+let camera = {
   x: 300,
   y: 0,
 };
