@@ -228,7 +228,97 @@ let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 
 function init(){
+  player = new Player({
+    x: 100,
+    y: 100,
+    size: 32,
+    velocity: { x: 0, y: 0 },
+  });
 
+  opossums = [
+    new Opossum({
+      x: 650,
+      y: 100,
+      width: 36,
+      height: 28,
+    }),
+    new Opossum({
+      x: 600,
+      y: 100,
+      width: 36,
+      height: 28,
+    }),
+    new Opossum({
+      x: 550,
+      y: 100,
+      width: 36,
+      height: 28,
+    }),
+    new Opossum({
+      x: 500,
+      y: 100,
+      width: 36,
+      height: 28,
+    }),
+    new Opossum({
+      x: 400,
+      y: 100,
+      width: 36,
+      height: 28,
+    }),
+  ];
+
+  sprites = [];
+
+  hearts = [
+    new Heart({
+      x: 33,
+      y: 10,
+      width: 21,
+      height: 18,
+      imageSrc: "/images/hearts.png",
+      spriteCropbox: {
+        x: 0,
+        y: 0,
+        width: 21,
+        height: 18,
+        frames: 6,
+      },
+    }),
+    new Heart({
+      x: 56,
+      y: 10,
+      width: 21,
+      height: 18,
+      imageSrc: "/images/hearts.png",
+      spriteCropbox: {
+        x: 0,
+        y: 0,
+        width: 21,
+        height: 18,
+        frames: 6,
+      },
+    }),
+    new Heart({
+      x: 10,
+      y: 10,
+      width: 21,
+      height: 18,
+      imageSrc: "/images/hearts.png",
+      spriteCropbox: {
+        x: 0,
+        y: 0,
+        width: 21,
+        height: 18,
+        frames: 6,
+      },
+    }),
+  ];
+
+    camera = {
+    x: 300,
+    y: 0,
+  };
 }
 
 function animate(backgroundCanvas) {
