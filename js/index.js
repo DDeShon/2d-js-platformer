@@ -228,6 +228,29 @@ let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 
 function init(){
+  collisionBlocks.forEach((row, y) => {
+  row.forEach((symbol, x) => {
+    if (symbol === 1) {
+      collisionBlocks.push(
+        new CollisionBlock({
+          x: x * blockSize,
+          y: y * blockSize,
+          size: blockSize,
+        })
+      );
+    } else if (symbol === 2) {
+      platforms.push(
+        new Platform({
+          x: x * blockSize,
+          y: y * blockSize + blockSize,
+          width: 16,
+          height: 4,
+        })
+      );
+    }
+  });
+});
+
   player = new Player({
     x: 100,
     y: 100,
