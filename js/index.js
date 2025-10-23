@@ -369,6 +369,8 @@ function animate(backgroundCanvas) {
 
         if(!player.isInvincible && fullHearts.length > 0){
           fullHearts[fullHearts.length - 1].depleted = true;
+        }else if (fullHearts.length === 0){
+          init();
         }
         player.setIsInvincible();
       }
