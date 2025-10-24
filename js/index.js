@@ -228,7 +228,7 @@ let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 
 function init(){
-  collisionBlocks.forEach((row, y) => {
+  l_Gems.forEach((row, y) => {
   row.forEach((symbol, x) => {
     if (symbol === 1) {
       collisionBlocks.push(
