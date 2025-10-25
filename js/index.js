@@ -231,8 +231,8 @@ function init(){
   l_Gems.forEach((row, y) => {
   row.forEach((symbol, x) => {
     if (symbol === 18) {
-      collisionBlocks.push(
-        new CollisionBlock({
+      gems.push(
+        new Gem({
           x: x * blockSize,
           y: y * blockSize,
           size: blockSize,
