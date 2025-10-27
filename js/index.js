@@ -233,9 +233,6 @@ function init(){
     if (symbol === 18) {
       gems.push(
         new Sprite({
-          x: x * blockSize,
-          y: y * blockSize,
-          size: blockSize,
         })
       );
     } else if (symbol === 2) {
