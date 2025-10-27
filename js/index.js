@@ -232,7 +232,7 @@ function init(){
   row.forEach((symbol, x) => {
     if (symbol === 18) {
       gems.push(
-        new Gem({
+        new Sprite({
           x: x * blockSize,
           y: y * blockSize,
           size: blockSize,
