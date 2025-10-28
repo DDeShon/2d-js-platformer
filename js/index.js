@@ -235,16 +235,7 @@ function init(){
         new Sprite({
         })
       );
-    } else if (symbol === 2) {
-      platforms.push(
-        new Platform({
-          x: x * blockSize,
-          y: y * blockSize + blockSize,
-          width: 16,
-          height: 4,
-        })
-      );
-    }
+    } 
   });
 });
 
