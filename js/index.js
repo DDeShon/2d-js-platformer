@@ -226,6 +226,7 @@ const SCROLL_POST_TOP = 100;
 const SCROLL_POST_BOTTOM = 200;
 let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
+let gems = [];
 
 function init(){
   l_Gems.forEach((row, y) => {
