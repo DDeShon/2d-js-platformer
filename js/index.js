@@ -229,6 +229,7 @@ let brambleBackgroundCanvas = null;
 let gems = [];
 
 function init(){
+  gems = [];
   l_Gems.forEach((row, y) => {
   row.forEach((symbol, x) => {
     if (symbol === 18) {
