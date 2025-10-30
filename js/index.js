@@ -228,18 +228,15 @@ let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 let gems = [];
 
-function init(){
+function init() {
   gems = [];
   l_Gems.forEach((row, y) => {
-  row.forEach((symbol, x) => {
-    if (symbol === 18) {
-      gems.push(
-        new Sprite({
-        })
-      );
-    } 
+    row.forEach((symbol, x) => {
+      if (symbol === 18) {
+        gems.push(new Sprite({}));
+      }
+    });
   });
-});
 
   player = new Player({
     x: 100,
@@ -328,7 +325,7 @@ function init(){
     }),
   ];
 
-    camera = {
+  camera = {
     x: 300,
     y: 0,
   };
@@ -380,9 +377,9 @@ function animate(backgroundCanvas) {
           return !heart.depleted;
         });
 
-        if(!player.isInvincible && fullHearts.length > 0){
+        if (!player.isInvincible && fullHearts.length > 0) {
           fullHearts[fullHearts.length - 1].depleted = true;
-        }else if (fullHearts.length === 0){
+        } else if (fullHearts.length === 0) {
           init();
         }
         player.setIsInvincible();
@@ -433,8 +430,6 @@ function animate(backgroundCanvas) {
     const sprite = sprites[i];
     sprite.draw(c);
   }
-
-  
 
   // This block will show scroll posts for debugging purposes
   // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
