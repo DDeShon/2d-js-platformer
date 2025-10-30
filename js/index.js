@@ -233,7 +233,22 @@ function init() {
   l_Gems.forEach((row, y) => {
     row.forEach((symbol, x) => {
       if (symbol === 18) {
-        gems.push(new Sprite({}));
+        gems.push(
+          new Sprite({
+            x: opossum.x,
+            y: opossum.y,
+            width: 32,
+            height: 32,
+            imageSrc: "./images/enemy-death.png",
+            spriteCropbox: {
+              x: 0,
+              y: 0,
+              width: 40,
+              height: 41,
+              frames: 6,
+            },
+          })
+        );
       }
     });
   });
