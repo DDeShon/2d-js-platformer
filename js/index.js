@@ -237,8 +237,8 @@ function init() {
           new Sprite({
             x: x * 16,
             y: y * 16,
-            width: 32,
-            height: 32,
+            width: 15,
+            height: 13,
             imageSrc: "./images/enemy-death.png",
             spriteCropbox: {
               x: 0,
