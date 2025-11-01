@@ -235,8 +235,8 @@ function init() {
       if (symbol === 18) {
         gems.push(
           new Sprite({
-            x: opossum.x,
-            y: opossum.y,
+            x: x * 16,
+            y: y * 16,
             width: 32,
             height: 32,
             imageSrc: "./images/enemy-death.png",
