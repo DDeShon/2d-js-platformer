@@ -245,7 +245,7 @@ function init() {
               y: 0,
               width: 15,
               height: 13,
-              frames: 6,
+              frames: 5,
             },
           })
         );
