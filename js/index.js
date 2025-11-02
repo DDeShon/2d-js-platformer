@@ -239,7 +239,7 @@ function init() {
             y: y * 16,
             width: 15,
             height: 13,
-            imageSrc: "./images/enemy-death.png",
+            imageSrc: "./images/gem.png",
             spriteCropbox: {
               x: 0,
               y: 0,
