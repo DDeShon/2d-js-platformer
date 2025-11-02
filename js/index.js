@@ -243,8 +243,8 @@ function init() {
             spriteCropbox: {
               x: 0,
               y: 0,
-              width: 40,
-              height: 41,
+              width: 15,
+              height: 13,
               frames: 6,
             },
           })
