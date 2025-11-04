@@ -412,12 +412,8 @@ function animate(backgroundCanvas) {
   }
 
   for (let i = gems.length - 1; i >= 0; i--) {
-    const sprite = gems[i];
-    sprite.update(deltaTime);
-
-    if (sprite.iteration === 1) {
-      gems.splice(i, 1);
-    }
+    const gem = gems[i];
+    gem.update(deltaTime);
   }
 
   // Track scroll post distance
