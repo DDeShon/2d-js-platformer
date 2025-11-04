@@ -411,12 +411,12 @@ function animate(backgroundCanvas) {
     }
   }
 
-  for (let i = sprites.length - 1; i >= 0; i--) {
-    const sprite = sprites[i];
+  for (let i = gems.length - 1; i >= 0; i--) {
+    const sprite = gems[i];
     sprite.update(deltaTime);
 
     if (sprite.iteration === 1) {
-      sprites.splice(i, 1);
+      gems.splice(i, 1);
     }
   }
 
