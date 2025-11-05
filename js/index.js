@@ -451,8 +451,8 @@ function animate(backgroundCanvas) {
     sprite.draw(c);
   }
 
-  for (let i = sprites.length - 1; i >= 0; i--) {
-    const sprite = sprites[i];
+  for (let i = gems.length - 1; i >= 0; i--) {
+    const sprite = gems[i];
     sprite.draw(c);
   }
 
