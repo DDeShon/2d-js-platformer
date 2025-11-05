@@ -452,8 +452,8 @@ function animate(backgroundCanvas) {
   }
 
   for (let i = gems.length - 1; i >= 0; i--) {
-    const sprite = gems[i];
-    sprite.draw(c);
+    const gem = gems[i];
+    gem.draw(c);
   }
 
   // This block will show scroll posts for debugging purposes
