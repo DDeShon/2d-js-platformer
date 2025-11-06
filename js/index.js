@@ -489,3 +489,4 @@ const startRendering = async () => {
 };
 
 init();
+startRendering();
