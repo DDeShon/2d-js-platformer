@@ -487,3 +487,5 @@ const startRendering = async () => {
     console.error("Error during rendering: ", error);
   }
 };
+
+init();
