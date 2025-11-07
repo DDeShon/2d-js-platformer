@@ -416,6 +416,8 @@ function animate(backgroundCanvas) {
     gem.update(deltaTime);
 
     const collisionDirection = checkCollisions(player, gem);
+    // remove a gem
+    gems.splice(i, 1);
   }
 
   // Track scroll post distance
