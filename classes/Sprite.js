@@ -27,7 +27,7 @@ class Sprite {
     this.currentFrame = 0;
     this.currentSprite = spriteCropbox;
     this.iteration = 0;
-    this.hitbox = {};
+    this.hitbox = hitbox;
   }
 
   draw(c) {
