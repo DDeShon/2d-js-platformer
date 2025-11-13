@@ -247,6 +247,10 @@ function init() {
               height: 13,
               frames: 5,
             },
+            hitbox: {
+              x: x * 16,
+              y: y * 16,
+            },
           })
         );
       }
