@@ -424,7 +424,11 @@ function animate(backgroundCanvas) {
     const collisionDirection = checkCollisions(player, gem);
     if (collisionDirection) {
       // create an item feedback animation
-      sprites.push();
+      sprites.push(
+        new Sprite({
+          x: gem.x,
+        })
+      );
       // remove a gem
       gems.splice(i, 1);
     }
