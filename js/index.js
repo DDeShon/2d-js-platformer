@@ -427,6 +427,9 @@ function animate(backgroundCanvas) {
       sprites.push(
         new Sprite({
           x: gem.x,
+          y: gem.y,
+          width: 32,
+          height: 32,
         })
       );
       // remove a gem
