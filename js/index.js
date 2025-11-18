@@ -431,6 +431,10 @@ function animate(backgroundCanvas) {
           width: 32,
           height: 32,
           imageSrc: "./images/item-feedback.png",
+          spriteCropbox: {
+            x: 0,
+            y: 0,
+          },
         })
       );
       // remove a gem
