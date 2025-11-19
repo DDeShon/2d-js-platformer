@@ -436,6 +436,7 @@ function animate(backgroundCanvas) {
             y: 0,
             width: 40,
             height: 41,
+            frames: 6,
           },
         })
       );
