@@ -434,9 +434,9 @@ function animate(backgroundCanvas) {
           spriteCropbox: {
             x: 0,
             y: 0,
-            width: 40,
-            height: 41,
-            frames: 6,
+            width: 32,
+            height: 32,
+            frames: 5,
           },
         })
       );
