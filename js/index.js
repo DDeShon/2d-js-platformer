@@ -426,8 +426,8 @@ function animate(backgroundCanvas) {
       // create an item feedback animation
       sprites.push(
         new Sprite({
-          x: gem.x,
-          y: gem.y,
+          x: gem.x - 8,
+          y: gem.y - 8,
           width: 32,
           height: 32,
           imageSrc: "./images/item-feedback.png",
