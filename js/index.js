@@ -227,6 +227,10 @@ const SCROLL_POST_BOTTOM = 200;
 let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 let gems = [];
+let gemUI = new Sprite({
+  x: 16,
+  y: 16,
+});
 
 function init() {
   gems = [];
