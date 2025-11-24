@@ -230,6 +230,8 @@ let gems = [];
 let gemUI = new Sprite({
   x: 16,
   y: 16,
+  width: 15,
+  height: 13,
 });
 
 function init() {
