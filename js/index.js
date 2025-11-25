@@ -232,6 +232,7 @@ let gemUI = new Sprite({
   y: 16,
   width: 15,
   height: 13,
+  imageSrc: "./images/gem.png",
 });
 
 function init() {
