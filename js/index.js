@@ -235,6 +235,8 @@ let gemUI = new Sprite({
   imageSrc: "./images/gem.png",
   spriteCropbox: {
     x: 0,
+    y: 0,
+    width: 15,
   },
 });
 
