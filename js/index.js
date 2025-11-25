@@ -237,6 +237,8 @@ let gemUI = new Sprite({
     x: 0,
     y: 0,
     width: 15,
+    height: 13,
+    frames: 5,
   },
 });
 
