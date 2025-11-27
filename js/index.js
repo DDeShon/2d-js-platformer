@@ -240,6 +240,9 @@ let gemUI = new Sprite({
     height: 13,
     frames: 5,
   },
+  hitbox: {
+    x: x * 16,
+  },
 });
 
 function init() {
