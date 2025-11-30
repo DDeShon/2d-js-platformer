@@ -243,6 +243,7 @@ let gemUI = new Sprite({
   hitbox: {
     x: x * 16,
     y: y * 16,
+    width: 15,
   },
 });
 
