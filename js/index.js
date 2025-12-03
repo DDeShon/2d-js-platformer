@@ -499,6 +499,8 @@ function animate(backgroundCanvas) {
     gem.draw(c);
   }
 
+  gemUI.draw(c);
+
   // This block will show scroll posts for debugging purposes
   // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
   // c.fillRect(300, SCROLL_POST_TOP, 100, 10);
