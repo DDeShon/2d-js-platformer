@@ -228,8 +228,8 @@ let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 let gems = [];
 let gemUI = new Sprite({
-  x: 16,
-  y: 16,
+  x: 13,
+  y: 36,
   width: 15,
   height: 13,
   imageSrc: "./images/gem.png",
