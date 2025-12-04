@@ -499,14 +499,13 @@ function animate(backgroundCanvas) {
     gem.draw(c);
   }
 
-  gemUI.draw(c);
-
   // This block will show scroll posts for debugging purposes
   // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
   // c.fillRect(300, SCROLL_POST_TOP, 100, 10);
   // c.fillRect(300, SCROLL_POST_BOTTOM, 100, 10);
   c.restore();
 
+  // UI save and restore
   c.save();
   c.scale(dpr + 1, dpr + 1);
   for (let i = hearts.length - 1; i >= 0; i--) {
