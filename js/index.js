@@ -512,6 +512,7 @@ function animate(backgroundCanvas) {
     const heart = hearts[i];
     heart.draw(c);
   }
+  gemUI.draw(c);
   c.restore();
 
   requestAnimationFrame(() => animate(backgroundCanvas));
