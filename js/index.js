@@ -513,7 +513,7 @@ function animate(backgroundCanvas) {
     heart.draw(c);
   }
   gemUI.draw(c);
-  c.fillText("", 16, 36);
+  c.fillText("", 26, 46);
   c.restore();
 
   requestAnimationFrame(() => animate(backgroundCanvas));
