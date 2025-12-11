@@ -242,8 +242,11 @@ let gemUI = new Sprite({
   },
 });
 
+let gemCount = 0;
+
 function init() {
   gems = [];
+  gemCount = 0;
   l_Gems.forEach((row, y) => {
     row.forEach((symbol, x) => {
       if (symbol === 18) {
