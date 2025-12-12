@@ -247,6 +247,20 @@ let gemCount = 0;
 function init() {
   gems = [];
   gemCount = 0;
+  gemUI = new Sprite({
+    x: 13,
+    y: 36,
+    width: 15,
+    height: 13,
+    imageSrc: "./images/gem.png",
+    spriteCropbox: {
+      x: 0,
+      y: 0,
+      width: 15,
+      height: 13,
+      frames: 5,
+    },
+  });
 
   l_Gems.forEach((row, y) => {
     row.forEach((symbol, x) => {
