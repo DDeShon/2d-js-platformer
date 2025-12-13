@@ -453,6 +453,7 @@ function animate(backgroundCanvas) {
     const gem = gems[i];
     gem.update(deltaTime);
 
+    // this is where gems are collected
     const collisionDirection = checkCollisions(player, gem);
     if (collisionDirection) {
       // create an item feedback animation
@@ -474,6 +475,7 @@ function animate(backgroundCanvas) {
       );
       // remove a gem
       gems.splice(i, 1);
+      gemCount++;
     }
   }
 
