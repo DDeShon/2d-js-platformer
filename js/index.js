@@ -15,12 +15,12 @@ const brambleLayerData = {
 
 const layersData = {
   l_New_Layer_8: l_New_Layer_8,
-  // l_New_Layer_3: l_New_Layer_3,
+  l_New_Layer_3: l_New_Layer_3,
   l_Decorations: l_Decorations,
-  // l_New_Layer_5: l_New_Layer_5,
-  // l_New_Layer_6: l_New_Layer_6,
-  // l_New_Layer_9: l_New_Layer_9,
-  // l_New_Layer_9_1: l_New_Layer_9_1,
+  l_New_Layer_5: l_New_Layer_5,
+  l_New_Layer_6: l_New_Layer_6,
+  l_New_Layer_9: l_New_Layer_9,
+  l_New_Layer_9_1: l_New_Layer_9_1,
 };
 
 const tilesets = {
