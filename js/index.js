@@ -14,8 +14,10 @@ const brambleLayerData = {
 };
 
 const layersData = {
+  l_New_Layer_1: l_New_Layer_1,
+  l_New_Layer_2: l_New_Layer_2,
   l_New_Layer_8: l_New_Layer_8,
-  l_New_Layer_3: l_New_Layer_3,
+  l_Back_Tiles: l_Back_Tiles,
   l_Decorations: l_Decorations,
   l_New_Layer_5: l_New_Layer_5,
   l_New_Layer_6: l_New_Layer_6,
