@@ -19,10 +19,12 @@ const layersData = {
   l_New_Layer_8: l_New_Layer_8,
   l_Back_Tiles: l_Back_Tiles,
   l_Decorations: l_Decorations,
-  l_New_Layer_5: l_New_Layer_5,
-  l_New_Layer_6: l_New_Layer_6,
-  l_New_Layer_9: l_New_Layer_9,
-  l_New_Layer_9_1: l_New_Layer_9_1,
+  l_Front_Tiles: l_Front_Tiles,
+  l_Shrooms: l_Shrooms,
+  l_Collisions: l_Collisions,
+  l_Grass: l_Grass,
+  l_Trees: l_Trees,
+  l_Gems: l_Gems,
 };
 
 const tilesets = {
