@@ -31,10 +31,10 @@ const tilesets = {
   l_New_Layer_1: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_2: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_8: { imageUrl: "./images/tileset.png", tileSize: 16 },
-  l_New_Layer_3: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  l_Back_Tiles: { imageUrl: "./images/tileset.png", tileSize: 16 },
   l_Decorations: { imageUrl: "./images/decorations.png", tileSize: 16 },
-  l_New_Layer_5: { imageUrl: "./images/tileset.png", tileSize: 16 },
-  l_New_Layer_6: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  l_Front_Tiles: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  l_Shrooms: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_9: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_New_Layer_9_1: { imageUrl: "./images/tileset.png", tileSize: 16 },
 };
