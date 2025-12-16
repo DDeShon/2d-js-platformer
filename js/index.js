@@ -35,8 +35,10 @@ const tilesets = {
   l_Decorations: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_Front_Tiles: { imageUrl: "./images/tileset.png", tileSize: 16 },
   l_Shrooms: { imageUrl: "./images/decorations.png", tileSize: 16 },
-  l_New_Layer_9: { imageUrl: "./images/decorations.png", tileSize: 16 },
-  l_New_Layer_9_1: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  l_Collisions: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  l_Grass: { imageUrl: "./images/tileset.png", tileSize: 16 },
+  l_Trees: { imageUrl: "./images/decorations.png", tileSize: 16 },
+  l_Gems: { imageUrl: "./images/decorations.png", tileSize: 16 },
 };
 
 // Tile Setup
