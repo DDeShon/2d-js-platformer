@@ -549,6 +549,7 @@ const startRendering = async () => {
   try {
     oceanBackgroundCanvas = await renderStaticLayers(oceanLayerData);
     bramblebackgroundCanvas = await renderStaticLayers(brambleLayerData);
+    const backgroundCanvas = await renderStaticLayers(layersData);
     if (!backgroundCanvas) {
       console.error("Failed to create the background canvas");
       return;
