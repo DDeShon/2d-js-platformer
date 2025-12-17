@@ -14,8 +14,6 @@ const brambleLayerData = {
 };
 
 const layersData = {
-  l_New_Layer_1: l_New_Layer_1,
-  l_New_Layer_2: l_New_Layer_2,
   l_New_Layer_8: l_New_Layer_8,
   l_Back_Tiles: l_Back_Tiles,
   l_Decorations: l_Decorations,
@@ -24,7 +22,6 @@ const layersData = {
   l_Collisions: l_Collisions,
   l_Grass: l_Grass,
   l_Trees: l_Trees,
-  l_Gems: l_Gems,
 };
 
 const tilesets = {
@@ -38,15 +35,14 @@ const tilesets = {
   l_Collisions: { imageUrl: "./images/decorations.png", tileSize: 16 },
   l_Grass: { imageUrl: "./images/tileset.png", tileSize: 16 },
   l_Trees: { imageUrl: "./images/decorations.png", tileSize: 16 },
-  l_Gems: { imageUrl: "./images/decorations.png", tileSize: 16 },
 };
 
-// Tile Setup
+// Tile setup
 const collisionBlocks = [];
 const platforms = [];
-const blockSize = 16; // Setting each tile as 16x16 pixels
+const blockSize = 16; // Assuming each tile is 16x16 pixels
 
-collisionBlocks.forEach((row, y) => {
+collisions.forEach((row, y) => {
   row.forEach((symbol, x) => {
     if (symbol === 1) {
       collisionBlocks.push(
@@ -80,14 +76,14 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
 
         context.drawImage(
           tilesetImage, // source image
-          srcX, // source X
-          srcY, // source Y
-          tileSize, // source width
-          tileSize, // source height
-          x * 16, // destination X
-          y * 16, // destination Y
-          16, // destination width
-          16 // destination height
+          srcX,
+          srcY, // source x, y
+          tileSize,
+          tileSize, // source width, height
+          x * 16,
+          y * 16, // destination x, y
+          16,
+          16 // destination width, height
         );
       }
     });
@@ -112,17 +108,20 @@ const renderStaticLayers = async (layersData) => {
           offscreenContext
         );
       } catch (error) {
-        console.error("Failed to load image for layer ${layerName}!", error);
+        console.error(`Failed to load image for layer ${layerName}:`, error);
       }
     }
   }
 
+  // Optionally draw collision blocks and platforms for debugging
+  // collisionBlocks.forEach(block => block.draw(offscreenContext));
+  // platforms.forEach((platform) => platform.draw(offscreenContext))
+
   return offscreenCanvas;
 };
+// END - Tile setup
 
-// END of Tile Setup
-
-// Change XY coordinates to move player's position
+// Change xy coordinates to move player's default position
 let player = new Player({
   x: 100,
   y: 100,
@@ -130,47 +129,30 @@ let player = new Player({
   velocity: { x: 0, y: 0 },
 });
 
-let opossums = [
-  new Opossum({
-    x: 650,
-    y: 100,
-    width: 36,
-    height: 28,
-  }),
-  new Opossum({
-    x: 600,
-    y: 100,
-    width: 36,
-    height: 28,
-  }),
-  new Opossum({
-    x: 550,
-    y: 100,
-    width: 36,
-    height: 28,
-  }),
-  new Opossum({
-    x: 500,
-    y: 100,
-    width: 36,
-    height: 28,
-  }),
-  new Opossum({
-    x: 400,
-    y: 100,
-    width: 36,
-    height: 28,
-  }),
-];
-
+let oposums = [];
+let eagles = [];
 let sprites = [];
 let hearts = [
+  new Heart({
+    x: 10,
+    y: 10,
+    width: 21,
+    height: 18,
+    imageSrc: "./images/hearts.png",
+    spriteCropbox: {
+      x: 0,
+      y: 0,
+      width: 21,
+      height: 18,
+      frames: 6,
+    },
+  }),
   new Heart({
     x: 33,
     y: 10,
     width: 21,
     height: 18,
-    imageSrc: "/images/hearts.png",
+    imageSrc: "./images/hearts.png",
     spriteCropbox: {
       x: 0,
       y: 0,
@@ -184,21 +166,7 @@ let hearts = [
     y: 10,
     width: 21,
     height: 18,
-    imageSrc: "/images/hearts.png",
-    spriteCropbox: {
-      x: 0,
-      y: 0,
-      width: 21,
-      height: 18,
-      frames: 6,
-    },
-  }),
-  new Heart({
-    x: 10,
-    y: 10,
-    width: 21,
-    height: 18,
-    imageSrc: "/images/hearts.png",
+    imageSrc: "./images/hearts.png",
     spriteCropbox: {
       x: 0,
       y: 0,
@@ -223,13 +191,13 @@ const keys = {
 
 let lastTime = performance.now();
 let camera = {
-  x: 300,
+  x: 0,
   y: 0,
 };
 
-const SCROLL_POST_RIGHT = 500;
+const SCROLL_POST_RIGHT = 330;
 const SCROLL_POST_TOP = 100;
-const SCROLL_POST_BOTTOM = 200;
+const SCROLL_POST_BOTTOM = 220;
 let oceanBackgroundCanvas = null;
 let brambleBackgroundCanvas = null;
 let gems = [];
@@ -247,7 +215,6 @@ let gemUI = new Sprite({
     frames: 5,
   },
 });
-
 let gemCount = 0;
 
 function init() {
@@ -303,49 +270,64 @@ function init() {
     size: 32,
     velocity: { x: 0, y: 0 },
   });
+  eagles = [
+    new Eagle({
+      x: 816,
+      y: 172,
+      width: 40,
+      height: 41,
+    }),
+  ];
 
-  opossums = [
-    new Opossum({
+  oposums = [
+    new Oposum({
       x: 650,
       y: 100,
       width: 36,
       height: 28,
     }),
-    new Opossum({
-      x: 600,
-      y: 100,
+    new Oposum({
+      x: 906,
+      y: 515,
       width: 36,
       height: 28,
     }),
-    new Opossum({
-      x: 550,
-      y: 100,
+    new Oposum({
+      x: 1150,
+      y: 515,
       width: 36,
       height: 28,
     }),
-    new Opossum({
-      x: 500,
-      y: 100,
-      width: 36,
-      height: 28,
-    }),
-    new Opossum({
-      x: 400,
-      y: 100,
+    new Oposum({
+      x: 1663,
+      y: 200,
       width: 36,
       height: 28,
     }),
   ];
 
   sprites = [];
-
   hearts = [
+    new Heart({
+      x: 10,
+      y: 10,
+      width: 21,
+      height: 18,
+      imageSrc: "./images/hearts.png",
+      spriteCropbox: {
+        x: 0,
+        y: 0,
+        width: 21,
+        height: 18,
+        frames: 6,
+      },
+    }),
     new Heart({
       x: 33,
       y: 10,
       width: 21,
       height: 18,
-      imageSrc: "/images/hearts.png",
+      imageSrc: "./images/hearts.png",
       spriteCropbox: {
         x: 0,
         y: 0,
@@ -359,21 +341,7 @@ function init() {
       y: 10,
       width: 21,
       height: 18,
-      imageSrc: "/images/hearts.png",
-      spriteCropbox: {
-        x: 0,
-        y: 0,
-        width: 21,
-        height: 18,
-        frames: 6,
-      },
-    }),
-    new Heart({
-      x: 10,
-      y: 10,
-      width: 21,
-      height: 18,
-      imageSrc: "/images/hearts.png",
+      imageSrc: "./images/hearts.png",
       spriteCropbox: {
         x: 0,
         y: 0,
@@ -385,7 +353,7 @@ function init() {
   ];
 
   camera = {
-    x: 300,
+    x: 0,
     y: 0,
   };
 }
@@ -400,20 +368,20 @@ function animate(backgroundCanvas) {
   player.handleInput(keys);
   player.update(deltaTime, collisionBlocks);
 
-  // Update opossum position
-  for (let i = opossums.length - 1; i >= 0; i--) {
-    const opossum = opossums[i];
-    opossum.update(deltaTime, collisionBlocks);
+  // Update oposum position
+  for (let i = oposums.length - 1; i >= 0; i--) {
+    const oposum = oposums[i];
+    oposum.update(deltaTime, collisionBlocks);
 
-    // When jumping on enemy
-    const collisionDirection = checkCollisions(player, opossum);
+    // Jump on enemy
+    const collisionDirection = checkCollisions(player, oposum);
     if (collisionDirection) {
       if (collisionDirection === "bottom" && !player.isOnGround) {
         player.velocity.y = -200;
         sprites.push(
           new Sprite({
-            x: opossum.x,
-            y: opossum.y,
+            x: oposum.x,
+            y: oposum.y,
             width: 32,
             height: 32,
             imageSrc: "./images/enemy-death.png",
@@ -427,7 +395,30 @@ function animate(backgroundCanvas) {
           })
         );
 
-        opossums.splice(i, 1);
+        oposums.splice(i, 1);
+      } else if (
+        (collisionDirection === "left" || collisionDirection === "right") &&
+        player.isOnGround &&
+        player.isRolling
+      ) {
+        sprites.push(
+          new Sprite({
+            x: oposum.x,
+            y: oposum.y,
+            width: 32,
+            height: 32,
+            imageSrc: "./images/enemy-death.png",
+            spriteCropbox: {
+              x: 0,
+              y: 0,
+              width: 40,
+              height: 41,
+              frames: 6,
+            },
+          })
+        );
+
+        oposums.splice(i, 1);
       } else if (
         collisionDirection === "left" ||
         collisionDirection === "right"
@@ -441,6 +432,55 @@ function animate(backgroundCanvas) {
         } else if (fullHearts.length === 0) {
           init();
         }
+
+        player.setIsInvincible();
+      }
+    }
+  }
+
+  // Update eagle position
+  for (let i = eagles.length - 1; i >= 0; i--) {
+    const eagle = eagles[i];
+    eagle.update(deltaTime, collisionBlocks);
+
+    // Jump on enemy
+    const collisionDirection = checkCollisions(player, eagle);
+    if (collisionDirection) {
+      if (collisionDirection === "bottom" && !player.isOnGround) {
+        player.velocity.y = -200;
+        sprites.push(
+          new Sprite({
+            x: eagle.x,
+            y: eagle.y,
+            width: 32,
+            height: 32,
+            imageSrc: "./images/enemy-death.png",
+            spriteCropbox: {
+              x: 0,
+              y: 0,
+              width: 40,
+              height: 41,
+              frames: 6,
+            },
+          })
+        );
+
+        eagles.splice(i, 1);
+      } else if (
+        collisionDirection === "left" ||
+        collisionDirection === "right" ||
+        collisionDirection === "top"
+      ) {
+        const fullHearts = hearts.filter((heart) => {
+          return !heart.depleted;
+        });
+
+        if (!player.isInvincible && fullHearts.length > 0) {
+          fullHearts[fullHearts.length - 1].depleted = true;
+        } else if (fullHearts.length === 0) {
+          init();
+        }
+
         player.setIsInvincible();
       }
     }
@@ -459,7 +499,7 @@ function animate(backgroundCanvas) {
     const gem = gems[i];
     gem.update(deltaTime);
 
-    // this is where gems are collected
+    // THIS IS WHERE WE ARE COLLECTING GEMS
     const collisionDirection = checkCollisions(player, gem);
     if (collisionDirection) {
       // create an item feedback animation
@@ -479,14 +519,19 @@ function animate(backgroundCanvas) {
           },
         })
       );
-      // remove a gem
+
+      // remove a gem from the game
       gems.splice(i, 1);
       gemCount++;
+
+      if (gems.length === 0) {
+        console.log("YOU WIN!");
+      }
     }
   }
 
   // Track scroll post distance
-  if (player.x > SCROLL_POST_RIGHT) {
+  if (player.x > SCROLL_POST_RIGHT && player.x < 1680) {
     const scrollPostDistance = player.x - SCROLL_POST_RIGHT;
     camera.x = scrollPostDistance;
   }
@@ -510,9 +555,15 @@ function animate(backgroundCanvas) {
   c.drawImage(brambleBackgroundCanvas, camera.x * 0.16, 0);
   c.drawImage(backgroundCanvas, 0, 0);
   player.draw(c);
-  for (let i = opossums.length - 1; i >= 0; i--) {
-    const opossum = opossums[i];
-    opossum.draw(c);
+
+  for (let i = oposums.length - 1; i >= 0; i--) {
+    const oposum = oposums[i];
+    oposum.draw(c);
+  }
+
+  for (let i = eagles.length - 1; i >= 0; i--) {
+    const eagle = eagles[i];
+    eagle.draw(c);
   }
 
   for (let i = sprites.length - 1; i >= 0; i--) {
@@ -525,10 +576,9 @@ function animate(backgroundCanvas) {
     gem.draw(c);
   }
 
-  // This block will show scroll posts for debugging purposes
-  // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100);
-  // c.fillRect(300, SCROLL_POST_TOP, 100, 10);
-  // c.fillRect(300, SCROLL_POST_BOTTOM, 100, 10);
+  // c.fillRect(SCROLL_POST_RIGHT, 100, 10, 100)
+  // c.fillRect(300, SCROLL_POST_TOP, 100, 10)
+  // c.fillRect(300, SCROLL_POST_BOTTOM, 100, 10)
   c.restore();
 
   // UI save and restore
@@ -538,6 +588,7 @@ function animate(backgroundCanvas) {
     const heart = hearts[i];
     heart.draw(c);
   }
+
   gemUI.draw(c);
   c.fillText(gemCount, 33, 46);
   c.restore();
@@ -548,7 +599,7 @@ function animate(backgroundCanvas) {
 const startRendering = async () => {
   try {
     oceanBackgroundCanvas = await renderStaticLayers(oceanLayerData);
-    bramblebackgroundCanvas = await renderStaticLayers(brambleLayerData);
+    brambleBackgroundCanvas = await renderStaticLayers(brambleLayerData);
     const backgroundCanvas = await renderStaticLayers(layersData);
     if (!backgroundCanvas) {
       console.error("Failed to create the background canvas");
@@ -557,7 +608,7 @@ const startRendering = async () => {
 
     animate(backgroundCanvas);
   } catch (error) {
-    console.error("Error during rendering: ", error);
+    console.error("Error during rendering:", error);
   }
 };
 
