@@ -40,7 +40,7 @@ const tilesets = {
 // Tile setup
 const collisionBlocks = [];
 const platforms = [];
-const blockSize = 16; // Assuming each tile is 16x16 pixels
+const blockSize = 16;
 
 collisions.forEach((row, y) => {
   row.forEach((symbol, x) => {
