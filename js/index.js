@@ -546,7 +546,7 @@ function animate(backgroundCanvas) {
     camera.y = -scrollPostDistance;
   }
 
-  // Render scene
+  // Render the scene
   c.save();
   c.scale(dpr + 1, dpr + 1);
   c.translate(-camera.x, camera.y);
