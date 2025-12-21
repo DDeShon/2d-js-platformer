@@ -583,7 +583,7 @@ function animate(backgroundCanvas) {
 
   // UI save and restore
   c.save();
-  c.scale(dpr + 1, dpr);
+  c.scale(dpr, dpr);
   for (let i = hearts.length - 1; i >= 0; i--) {
     const heart = hearts[i];
     heart.draw(c);
