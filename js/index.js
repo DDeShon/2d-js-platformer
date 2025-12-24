@@ -195,7 +195,7 @@ let camera = {
   y: 0,
 };
 
-const SCROLL_POST_RIGHT = 500;
+const SCROLL_POST_RIGHT = 300;
 const SCROLL_POST_TOP = 100;
 const SCROLL_POST_BOTTOM = 220;
 let oceanBackgroundCanvas = null;
