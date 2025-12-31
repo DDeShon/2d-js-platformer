@@ -341,6 +341,8 @@ function init() {
 }
 
 function animate(backgroundCanvas) {
+  console.log(player.x);
+  console.log(player.y);
   // Calculate delta time
   const currentTime = performance.now();
   const deltaTime = (currentTime - lastTime) / 1000;
