@@ -286,6 +286,12 @@ function init() {
       width: 36,
       height: 28,
     }),
+    new Oposum({
+      x: 906,
+      y: 515,
+      width: 36,
+      height: 28,
+    }),
   ];
 
   sprites = [];
