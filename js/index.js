@@ -279,14 +279,7 @@ function init() {
     }),
   ];
 
-  oposums = [
-    new Oposum({
-      x: 650,
-      y: 100,
-      width: 36,
-      height: 28,
-    }),
-  ];
+  oposums = [];
 
   sprites = [];
   hearts = [
