@@ -305,6 +305,12 @@ function init() {
       height: 28,
     }),
     new Oposum({
+      x: 1265,
+      y: 515,
+      width: 36,
+      height: 28,
+    }),
+    new Oposum({
       x: 1663,
       y: 200,
       width: 36,
