@@ -305,7 +305,11 @@ function init() {
       height: 28,
     }),
     new Oposum({
+<<<<<<< HEAD
       x: 1260,
+=======
+      x: 1245,
+>>>>>>> 28e6f1cff9c8b207749cd4503a0f0f11d16f02a7
       y: 515,
       width: 36,
       height: 28,
