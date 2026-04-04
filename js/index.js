@@ -306,7 +306,6 @@ function init() {
     }),
     new Oposum({
       x: 1260,
-
       y: 515,
       width: 36,
       height: 28,
