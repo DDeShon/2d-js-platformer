@@ -280,37 +280,37 @@ function init() {
   ];
 
   oposums = [
-    new Oposum({
+    new Opossum({
       x: 650,
       y: 100,
       width: 36,
       height: 28,
     }),
-    new Oposum({
+    new Opossum({
       x: 906,
       y: 515,
       width: 36,
       height: 28,
     }),
-    new Oposum({
+    new Opossum({
       x: 1050,
       y: 515,
       width: 36,
       height: 28,
     }),
-    new Oposum({
+    new Opossum({
       x: 1150,
       y: 515,
       width: 36,
       height: 28,
     }),
-    new Oposum({
-      x: 1265,
+    new Opossum({
+      x: 1260,
       y: 515,
       width: 36,
       height: 28,
     }),
-    new Oposum({
+    new Opossum({
       x: 1663,
       y: 200,
       width: 36,
