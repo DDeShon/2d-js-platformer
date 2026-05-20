@@ -50,7 +50,7 @@ collisions.forEach((row, y) => {
           x: x * blockSize,
           y: y * blockSize,
           size: blockSize,
-        })
+        }),
       );
     } else if (symbol === 2) {
       platforms.push(
@@ -59,7 +59,7 @@ collisions.forEach((row, y) => {
           y: y * blockSize + blockSize,
           width: 16,
           height: 4,
-        })
+        }),
       );
     }
   });
@@ -83,7 +83,7 @@ const renderLayer = (tilesData, tilesetImage, tileSize, context) => {
           x * 16,
           y * 16, // destination x, y
           16,
-          16 // destination width, height
+          16, // destination width, height
         );
       }
     });
@@ -105,7 +105,7 @@ const renderStaticLayers = async (layersData) => {
           tilesData,
           tilesetImage,
           tilesetInfo.tileSize,
-          offscreenContext
+          offscreenContext,
         );
       } catch (error) {
         console.error(`Failed to load image for layer ${layerName}:`, error);
@@ -258,7 +258,7 @@ function init() {
               width: 15,
               height: 13,
             },
-          })
+          }),
         );
       }
     });
@@ -305,7 +305,7 @@ function init() {
       height: 28,
     }),
     new Opossum({
-      x: 1270,
+      x: 1265,
       y: 515,
       width: 36,
       height: 28,
@@ -405,7 +405,7 @@ function animate(backgroundCanvas) {
               height: 41,
               frames: 6,
             },
-          })
+          }),
         );
 
         oposums.splice(i, 1);
@@ -428,7 +428,7 @@ function animate(backgroundCanvas) {
               height: 41,
               frames: 6,
             },
-          })
+          }),
         );
 
         oposums.splice(i, 1);
@@ -475,7 +475,7 @@ function animate(backgroundCanvas) {
               height: 41,
               frames: 6,
             },
-          })
+          }),
         );
 
         eagles.splice(i, 1);
@@ -530,7 +530,7 @@ function animate(backgroundCanvas) {
             height: 32,
             frames: 5,
           },
-        })
+        }),
       );
 
       // remove a gem from the game
