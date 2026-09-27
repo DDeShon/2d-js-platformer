@@ -299,7 +299,8 @@ function init() {
       height: 28,
     }),
     new Opossum({
-      x: 1150,
+      x: 11
+      0,
       y: 515,
       width: 36,
       height: 28,
