@@ -297,7 +297,7 @@ function init() {
       y: 515,
       width: 36,
 <<<<<<< HEAD
-      height: 25,
+      height: 28,
 =======
       height: 28,
 >>>>>>> b0a2a77f0634edd6f7e3ec42ff4de9b8d5bcff06
