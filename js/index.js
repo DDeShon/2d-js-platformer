@@ -296,7 +296,6 @@ function init() {
       x: 1050,
       y: 515,
       width: 36,
-<<<<<<< HEAD
       height: 28,
     }),
     new Opossum({
